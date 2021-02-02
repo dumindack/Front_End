@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './CSS/Footer.css'
+import '../components/Pages/Privacy'
 
 export class Footer extends Component {
     render() {
@@ -25,7 +26,7 @@ export class Footer extends Component {
                             <p class="text">Sri Lanka</p>
                         </div>
                         <div id="legal">
-                            <p id="txt3">Legal</p> <a class="link1" href="#">Terms and Conditions</a> <a class="link1" href="/">Privacy Policy</a>
+                            <p id="txt3">Legal</p> <a class="link1" href="#">Terms and Conditions</a> <a class="link1" href="/Privacy">Privacy Policy</a>
                         </div>
                         <div id="subscribe">
                             <p id="txt4">Hot Line </p>

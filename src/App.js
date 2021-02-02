@@ -3,7 +3,8 @@ import './App.css';
 import Navigationbar from './components/Navigationbar';
 import { Route, BrowserRouter } from "react-router-dom";
 import Home from './components/Pages/Home';
-import Footer from '../src/components/Footer'
+import Footer from '../src/components/Footer';
+import Privacy from './components/Pages/Privacy';
 
 
   class App extends Component{
@@ -17,7 +18,11 @@ import Footer from '../src/components/Footer'
               </div>
           </div>
           
-
+          <div>
+            <Route path="/Privacy">
+              <Privacy/>
+            </Route>
+          </div>
 
           
           <div>

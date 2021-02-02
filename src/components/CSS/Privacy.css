@@ -1,0 +1,15 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    background: hsl(0, 0%, 100%);
+    color: rgb(77, 33, 3);
+    font-size: 20px;
+  }
+  
+  .header1 {
+    padding: 60px;
+    text-align: center;
+    background: hsl(0, 0%, 100%);
+    color: rgb(167, 6, 54);
+    font-size: 20px;
+  }
