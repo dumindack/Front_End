@@ -5,6 +5,8 @@ import { Route, BrowserRouter } from "react-router-dom";
 import Home from './components/Pages/Home';
 import Footer from '../src/components/Footer';
 import Privacy from './components/Pages/Privacy';
+import Login from './components/Login';
+
 
 
   class App extends Component{
@@ -15,11 +17,13 @@ import Privacy from './components/Pages/Privacy';
             <Navigationbar/>
               <div>
                 <Route exact path='/' component={Home}/>
+                <Route path='/Login' component={Login}/>
+               
               </div>
           </div>
           
           <div>
-            <Route path="/Privacy">
+          <Route path="/Privacy">
               <Privacy/>
             </Route>
           </div>

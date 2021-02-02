@@ -58,7 +58,7 @@ return(
 
             <div class="topnav">
               <div class="topnav-right">
-                <a href="#">Log in</a>
+                <a href="/Login">Login</a>
                 <a href="/">Register</a>
                 <a href="#">My Profile</a>
               </div>
