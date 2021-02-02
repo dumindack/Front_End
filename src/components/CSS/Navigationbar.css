@@ -97,5 +97,12 @@
     background-color: rgb(255, 255, 255);
 }
 
+.custom-container{
+    padding-right: 0;
+    padding-left: 0;
+    height: auto;
+    width: 100%;
+    
+  }
 
 

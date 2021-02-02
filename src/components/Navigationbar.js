@@ -7,7 +7,7 @@ import text from '../Media/logo/text.png'
 
 const Navigationbar = () =>{
 return(
-<div>
+<div class="custom-container">
         <nav class="navbar navbar-expand-sm navbar-custom">
             <a class="navbar-brand" href="#">
               <a class="box">
@@ -65,16 +65,9 @@ return(
             </div>
                 
         </nav>
-        <div class="row">
-        <div class="col-md-8">
-            <img class="text1"
-                src={text}
-            />
+        <div>
+                  
         </div>
-          <div class="col-md-4">
-            <h class="t">Hotline : 011 000 0000</h>
-          </div>
-        </div>   
     </div>
       )
 }
