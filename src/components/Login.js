@@ -17,19 +17,20 @@ const Login = () => {
   const onChange = e => setFromData({ ...formData, [e.target.name]: e.target.value })
 
   const onSubmit = async e => {
+    
     e.preventDefault();
 
     if (login(email, password)){
-      console.log("Place")
+      console.log("If working")
+
       
       
-        ReactDOM.render(
-        <Router>
-         
-        </Router>
+      
         
-      )
        
+    }
+    else{
+      console.log(" else working")
     }
     
     
@@ -42,7 +43,7 @@ const Login = () => {
       <section className="container">
      
        <form className="form"  onSubmit={e => onSubmit(e)}>
-          <div className="form-group">
+         
             <div className="form-group">
               <small className="form-text"> Email</small>
               <input
@@ -53,7 +54,6 @@ const Login = () => {
                 onChange={e => onChange(e)}
               />
             </div>
-          </div>
           <div className="form-group">
             <small className="form-text"> Password</small>
             <input

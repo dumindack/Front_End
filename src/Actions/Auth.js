@@ -1,6 +1,7 @@
 import axois from 'axios';
 
 export const login = async (email, password) => {
+    
     const config = {
         headers: { "Content-Type": "application/json" }
     };
@@ -8,14 +9,19 @@ export const login = async (email, password) => {
     const body = JSON.stringify({ email, password });
 
     try {
-         await axois.post("https://localhost:44305/api/Buyers/login", body, config)
-         .then(res => {return res.status});
+         await axois.post("https://localhost:44305/api/Logins/login", body, config)
+         .then(res => {
+            console.log(" tra working "+res.status)
+             return res.status
+            });
+            alert(" login succes");
+        
          
          
          
     } catch (error) {
-        alert(" Please Check your Email and Password again");
-        console.log(error);
+        alert(" Check your Email or Password");
+        console.log("catworking ");
         
     }
     
