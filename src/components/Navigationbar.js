@@ -59,7 +59,7 @@ return(
             <div class="topnav">
               <div class="topnav-right">
                 <a href="/Login">Login</a>
-                <a href="/">Register</a>
+                <a href="/Register">Register</a>
                 <a href="#">My Profile</a>
               </div>
             </div>

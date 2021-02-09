@@ -9,7 +9,7 @@ export const login = async (email, password) => {
     const body = JSON.stringify({ email, password });
 
     try {
-         await axois.post("https://localhost:44305/api/Logins/login", body, config)
+         await axois.post("https://localhost:5001/api/Logins/login", body, config)
          .then(res => {
             console.log(" tra working "+res.status)
              return res.status
@@ -24,6 +24,39 @@ export const login = async (email, password) => {
         console.log("catworking ");
         
     }
+};
+
+
+export const registerSeller = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {
+    const config = {
+        headers: { "Content-Type": "application/json" }
+    };
+
+    const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd});
+
+    if (Password!= Repasswerd){
+        alert("Password didn't Matched Try again..")
+    }
+
+    else {
+
+
+        try {
+            await axois.post("https://localhost:5001/api/Sellers", body, config);
+            alert("Your are registerd ");
     
+        } catch (error) {
+            alert("Please Check Your Information again ");
+            console.log(error);
+            
+        }
+
+
+
+
+    }
+
+
+   
 
 };

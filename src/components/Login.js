@@ -40,6 +40,8 @@ const Login = () => {
 
   return (
     <Fragment>
+
+      <h1 className="large ">User Login</h1>
       <section className="container">
      
        <form className="form"  onSubmit={e => onSubmit(e)}>
@@ -65,7 +67,7 @@ const Login = () => {
               minLength="6"
             />
           </div>
-          <input type="submit" className="btn" value="Login" />
+          <input type="submit" className="btn btn-log" value="Login" />
         </form>
       </section>
     </Fragment>
