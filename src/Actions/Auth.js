@@ -9,7 +9,7 @@ export const login = async (email, password) => {
     const body = JSON.stringify({ email, password });
 
     try {
-         await axois.post("https://localhost:5001/api/Logins/login", body, config)
+         await axois.post("https://localhost:44305/api/Logins/login", body, config)
          .then(res => {
             console.log(" tra working "+res.status)
              return res.status
@@ -42,7 +42,7 @@ export const registerSeller = async (FirstName, LastName, Address, Gender,Email,
 
 
         try {
-            await axois.post("https://localhost:5001/api/Sellers", body, config);
+            await axois.post("https://localhost:44305/api/Sellers", body, config);
             alert("Your are registerd ");
     
         } catch (error) {
