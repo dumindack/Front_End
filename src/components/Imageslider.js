@@ -19,7 +19,7 @@ export class Imageslider extends Component {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>Place Your Order</h3>
+                            <h3></h3>
                             <p></p>
                     </Carousel.Caption>
                     </Carousel.Item>
@@ -31,7 +31,7 @@ export class Imageslider extends Component {
                                 alt="Third slide"
                             />
                             <Carousel.Caption>
-                                <h3>Order Your Cake</h3>
+                                <h3></h3>
                                 <p></p>
                             </Carousel.Caption>
                     </Carousel.Item>
@@ -43,7 +43,7 @@ export class Imageslider extends Component {
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h3>ඔබේ කේක් ඇණවුම් කරන්න</h3>
+                            <h3></h3>
                             <p>.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
