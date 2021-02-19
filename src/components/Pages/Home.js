@@ -108,7 +108,10 @@ const Home = () => {
 
                 <div>
                   <Products products={products} sortProducts={sortProducts} addToCart={addToCart} viewDetail={viewDetails}  />
-                </div>       
+                </div>
+                <br/>       
+                <hr/>
+                <br/>
           </div>
         )
     }
