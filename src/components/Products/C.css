@@ -366,6 +366,7 @@
  .subtotal-price {
    font-weight: bolder;
    color: #5f059b;
+   font-size: 1.4rem;
  }
  
  .checkout-btn {
@@ -460,6 +461,7 @@
  
  .item-quantity {
    color: rgb(85, 85, 85);
+   font-size: 1.2rem;
  }
  
  .cart-item-price {
@@ -468,16 +470,21 @@
  }
  
  .quantity-btn {
-   margin-left: 7px;
-   font-size: 1.1rem;
-   border: 0;
-   padding: 0;
-   width: 20px;
-   height: 20px;
-   color: white;
-   background: #535353;
-   cursor: pointer;
+  margin-left: 7px;
+  font-size: 0.95rem;
+  border: 0;
+  padding: 0;
+  width: 45px;
+  height: 20px;
+  color: rgb(100, 100, 100);
+  background: #ffffff;
+  cursor: pointer;
  }
+ .quantity-btn:hover {
+   color: rgb(238, 1, 131);
+   background: hsl(0, 0%, 100%);
+   cursor: pointer;
+  }
  
  @media only screen and (max-width: 1000px) {
    .App {

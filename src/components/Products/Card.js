@@ -16,7 +16,7 @@ const Card = ({data, addToCart, viewDetail, product, props}) => {
                         <h3 className="card-title">{data.title}</h3>
                         <p className="price">Rs: {data.price}.00</p>
                         <div>
-                            <button  className="card-button1" onClick={() => viewDetail(data)}>View</button>
+                            <button  className="card-button1">View</button>
                             <button href="#" className="card-button2" onClick={() => addToCart(data)}>Add to Cart</button>
                         </div>
                     </div>

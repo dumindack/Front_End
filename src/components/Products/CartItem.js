@@ -16,8 +16,8 @@ const CartItem = ({product, changeQuantity}) => {
                     <div>
                         <p className="item-quantity">Quantity: <span>{product.quantity}</span></p>
                         <div>
-                            <button className="quantity-btn" onClick={() => changeQuantity(product, '-')}>-</button>
-                            <button className="quantity-btn" onClick={() => changeQuantity(product, '+')}>+</button>
+                            <button className="quantity-btn" onClick={() => changeQuantity(product, '-')}>remove</button>
+                            <button className="quantity-btn" onClick={() => changeQuantity(product, '+')}>add</button>
                         </div>
                     </div>
                 </div>
