@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import icon from '../Media/logo/logo.png';
 import './CSS/Navigationbar.css'
 import text from '../Media/logo/text.png'
+import Carticon from '../Media/icon/carticon.svg'
 
 
 const Navigationbar = () =>{
@@ -63,6 +64,16 @@ return(
                 <a href="#">My Profile</a>
               </div>
             </div>
+            <div>
+                  <div className="carticon">
+                    
+                    <div>
+                      <a href="/CartProducts">
+                      <img src={Carticon} alt="/"  width="30px"/>  
+                      </a>
+                    </div>
+                </div>
+                </div>
                 
         </nav>
         <div>

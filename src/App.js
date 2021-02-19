@@ -7,6 +7,7 @@ import Footer from '../src/components/Footer';
 import Privacy from './components/Pages/Privacy';
 import Login from './components/Login';
 import Register from './components/Register';
+import CartProducts from './components/Products/CartProducts'
 
 
   class App extends Component{
@@ -28,7 +29,11 @@ import Register from './components/Register';
               <Privacy/>
             </Route>
           </div>
-
+          <div>
+          <Route path="/CartProducts">
+            <CartProducts/>
+          </Route>
+        </div>
           
           <div>
             <Footer/>
