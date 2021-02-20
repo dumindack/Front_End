@@ -9,7 +9,7 @@ export const login = async (email, password) => {
     const body = JSON.stringify({ email, password });
 
     try {
-         await axois.post("https://localhost:44305/api/Logins/login", body, config)
+         await axois.post("https://localhost:44305/api/Logins", body, config)
          .then(res => {
             console.log(" tra working "+res.status)
              return res.status
