@@ -8,8 +8,9 @@ import Privacy from './components/Pages/Privacy';
 import Login from './components/Login';
 import Register from './components/Register';
 import CartProducts from './components/Products/CartProducts'
-
-
+import GetSellers from './components/Admin/GetSellers';
+import Admin from './components/Admin/Admin';
+import GetCakes from './components/Admin/GetCakes';
   class App extends Component{
     render(){
       return (
@@ -20,6 +21,11 @@ import CartProducts from './components/Products/CartProducts'
                 <Route exact path='/' component={Home}/>
                 <Route path='/Login' component={Login}/>
                 <Route path='/Register' component={Register}/>
+                <Route path='/GetSellers' component={GetSellers}/>
+                <Route path='/Admin' component={Admin}/>
+                <Route path='/GetCakes' component={GetCakes}/>
+               
+
                
               </div>
           </div>
@@ -34,6 +40,7 @@ import CartProducts from './components/Products/CartProducts'
             <CartProducts/>
           </Route>
         </div>
+        
           
           <div>
             <Footer/>

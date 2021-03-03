@@ -10,9 +10,9 @@ export const login = async (email, password) => {
 
     try {
          await axois.post("https://localhost:44305/api/Logins", body, config)
-         .then(res => {
-            console.log(" tra working "+res.status)
-             return res.status
+         .then(response => {
+            console.log(response)
+             return response.status
             });
             alert(" login succes");
         
