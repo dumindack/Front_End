@@ -1,0 +1,48 @@
+.aboutus{
+    font-size: 35px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(245, 141, 104);
+    
+
+}
+
+.description1{
+    text-align: justify ;
+    font-size: 20px;
+    padding: 5px;
+    padding-right: 350px;
+    background-color: burlywood;
+    padding-left: 350px;
+    
+
+
+}
+
+.image1{
+    background-color:blanchedalmond;
+    
+    padding-left: 400px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    
+    font-size: 20px;
+    align-content: left;
+    background-color: cornsilk;
+    padding: 10px;
+  }
+
+ .column1{
+     padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 20px;
+     text-align: justify;
+ }
+
+ .p1{
+     font-weight: bold;
+     text-align: center;
+ }
