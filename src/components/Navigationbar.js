@@ -61,6 +61,7 @@ return(
               <div class="topnav-right">
                 <a href="/Login">Login</a>
                 <a href="/Register">Register</a>
+                <a href="/DeliveryInfo">Delivery Info</a>
                 <a href="#">My Profile</a>
               </div>
             </div>
