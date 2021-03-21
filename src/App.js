@@ -33,18 +33,11 @@ import About from './components/Pages/About';
                
               </div>
           </div>
-          
+
           <div>
-          <Route path="/Privacy">
-              <Privacy/>
-            </Route>
+            <Route path="/Privacy" component={Privacy}/>
+            <Route path="/CartProducts" component={CartProducts}/>
           </div>
-          <div>
-          <Route path="/CartProducts">
-            <CartProducts/>
-          </Route>
-        </div>
-        
           
           <div>
             <Footer/>
