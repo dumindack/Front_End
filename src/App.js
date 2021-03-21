@@ -7,12 +7,14 @@ import Footer from '../src/components/Footer';
 import Privacy from './components/Pages/Privacy';
 import Login from './components/Login';
 import Register from './components/Register';
-import CartProducts from './components/Products/CartProducts'
+import Details from './components/Products/Details';
 import GetSellers from './components/Admin/GetSellers';
 import Admin from './components/Admin/Admin';
 import GetCakes from './components/Admin/GetCakes';
 import DeliveryInfo from './components/DeliveryInfo';
 import About from './components/Pages/About';
+
+
   class App extends Component{
     render(){
       return (
@@ -36,9 +38,9 @@ import About from './components/Pages/About';
 
           <div>
             <Route path="/Privacy" component={Privacy}/>
-            <Route path="/CartProducts" component={CartProducts}/>
+            <Route path="/products/:productID" component={Details}/>
           </div>
-          
+
           <div>
             <Footer/>
           </div>

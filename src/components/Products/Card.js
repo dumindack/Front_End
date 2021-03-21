@@ -1,29 +1,36 @@
-import React from 'react'
-import './C.css'
+import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import './ProductCSS/Card.css'
 
-const Card = ({data, addToCart, viewDetail, product, props}) => {
-    return (
-        <div>
+const Card = (props) => {
+    const { product, onAdd } = props;
+    
+    
+        return (
             <div>
                 <div >                 
                      <div className="card">
-                        <Link to="/Pd">
-                            <a href="/ProductDetails">
-                                <img src={data.url}  className="card-image" alt="product" title={data.title} />
-                            </a>
+                        <Link to={`/products/${props.product.productID}`}>
+                            <img src={props.product.imageSrc}  className="card-image" alt="image/" />
                         </Link>
-                        <h3 className="card-title">{data.title}</h3>
-                        <p className="price">Rs: {data.price}.00</p>
+                        <div className="txt-area">
+                            <div className="txt-area1">
+                            <p className="card-title">{props.product.productName}</p>
+                            </div>
+                        </div>
+                        <p className="price">Rs: {props.product.price}.00</p>
                         <div>
-                            <button  className="card-button1">View</button>
-                            <button href="#" className="card-button2" onClick={() => addToCart(data)}>Add to Cart</button>
+                            <Link to={`/products/${props.product.productID}`}>
+                                <button  className="card-button1">View</button>
+                            </Link>
+                            <button className="card-button2" onClick={() => onAdd(product)}>add to Cart </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+        )
+    
+} 
 
-export default Card;
+export default Card
+

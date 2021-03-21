@@ -1,0 +1,113 @@
+.card {
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    border: 10px solid #ffffff;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    margin-left: 5px;
+    width: 270px;
+  }
+  .card:hover{ box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1); }
+  
+    .card-title {
+      margin-top: 9px;
+      margin-bottom: 1px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: #3d0130;;
+      font-weight: 600;
+    }
+
+    .txt-area {
+      height: 50px;
+    }
+
+    .txt-area1 {
+      line-height: 18px;
+      max-height: 50px;
+    }
+    
+    .price {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    
+   .card-image {
+     width: 250px;
+     height: 250px;
+     border-radius: 15px 10px 0px 0px;
+   }
+   .card .card-image{ position: relative; }
+  
+   .card-button1 {
+     margin: 0.1rem;
+     border-radius: 0.5rem;
+     width: 100%;
+     cursor: pointer;
+     background-color: #8a0683;
+     border: none;
+     color: white;
+     padding: 5px 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 10px; 
+   }
+  .card-button1:hover{background-color: rgb(189, 9, 54);}
+  
+  .card-button2 {
+     margin: 0.1rem;
+     border-radius: 0.5rem;
+     width: 100%;
+     cursor: pointer;
+     background-color: #49035a;
+     border: none;
+     color: white;
+     padding: 5px 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 10px;
+   }
+   .card-button2:hover{background-color: rgb(109, 5, 141);}
+  
+   .cart-item {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding: 14px;
+     border-bottom: 2px solid rgb(100, 100, 100, 0.3);
+     color: #fff;
+   }
+   
+   .cart-item > div {
+     flex-grow: 1;
+     margin-left: 10px;
+   }
+   
+   .cart-item > div > div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   .cart-item p {
+     margin: 6px 0;
+   }
+   
+   .cart-item-image {
+     width: 74px;
+   }
+   
+   .item-title {
+     color: rgb(250, 250, 250);
+     font-weight: bolder;
+     font-size: 1.25rem;
+     text-transform: uppercase;
+   }
+  
+   
+   

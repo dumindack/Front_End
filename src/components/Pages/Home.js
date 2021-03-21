@@ -1,116 +1,45 @@
 import React, {useState, useEffect} from 'react';
 import Imageslide from '../Imageslider'
-import Products from '../Products/Products';
-import FilterList1 from '../Products/Filterlist1';
-
-
+import Products from '../Products/Products'
 
 
 const Home = () => {
-    const [products, setProducts] = useState([]);
-    const [selectedSizes, setSelectedSizes] = useState([]);
-    const [selectedCategorys, setSelectedCategorys] = useState([]);
-    const [cart, setCart] = useState([]);
-    const [details, setDetails] = useState([]);
-  
-    useEffect(() => {
-      setProducts(FilterList1([], null));
-      if(JSON.parse(localStorage.getItem("cart"))) {
-        setCart(JSON.parse(localStorage.getItem("cart")));
-      }
-    }, [])
 
- 
-  
-    const setCategory = (category) => {
-      const categorys = [...selectedCategorys];
-      
-      if(categorys.includes(category)) {
-        const index = categorys.indexOf(category);
-        categorys.splice(index, 1);
+  const [cartItems, setCartItems] = useState([]);
+  const onAdd = (product) => {
+      const exist = cartItems.find((x) => x.id === product.id);
+      if (exist) {
+        setCartItems(
+          cartItems.map((x) =>
+            x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          )
+        );
+      } else {
+        setCartItems([...cartItems, { ...product, qty: 1 }]);
       }
-      else {
-        categorys.push(category);
+    };
+    const onRemove = (product) => {
+      const exist = cartItems.find((x) => x.id === product.id);
+      if (exist.qty === 1) {
+        setCartItems(cartItems.filter((x) => x.id !== product.id));
+      } else {
+        setCartItems(
+          cartItems.map((x) =>
+            x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+          )
+        );
       }
-      
-      setProducts(FilterList1(categorys, 'category'));
-    }
-  
-    const sortProducts = (category) => {
-     
-      const categorys = [...selectedCategorys];
-      
-      if(categorys.includes(category)) {
-        const index = categorys.indexOf(category);
-        categorys.splice(index, 1);
-        
-      }
-      else {
-        categorys.push(category);
-      }
-      setProducts(FilterList1(categorys, 'category'));
-      
-    }
-  
-    const addToCart = (item) => {
-      const productList = [...cart];
-      if(!productList.includes(item)) {
-        productList.push(item);
-      }
-      const index = productList.indexOf(item);
-      productList[index].quantity++;
-      setCart(productList);
-      localStorage.setItem("cart", JSON.stringify(productList));
-    }
-
-
-
-    const viewDetails = (item) => {
-      const productList = [...details];
-      if(!productList.includes(item)) {
-        productList.push(item);
-      }
-      
-      setDetails(productList);
-      
-    }
-
-
-
-    const changeQuantity = (item, e) => {
-      const productList = [...cart];
-      const index = productList.indexOf(item);
-      if(e === '+') {
-        productList[index].quantity++;
-      }
-      else {
-        if(productList[index].quantity > 1) {
-          productList[index].quantity--;
-        }
-        else {
-          productList.splice(index, 1);
-        }
-      } 
-      setCart(productList);
-      localStorage.setItem("cart", JSON.stringify(productList));
-    }
-  
+    };
      
         return (
             <div>
                 <Imageslide/>
-               
-                <br/>
-
-                <hr/>
 
                 <br/>
+                <Products onAdd={onAdd}/>
 
-                <div>
-                  <Products products={products} sortProducts={sortProducts} addToCart={addToCart} viewDetail={viewDetails}  />
-                </div>
-                <br/>       
-                <hr/>
+                <br/>     
+           
                 <br/>
           </div>
         )
