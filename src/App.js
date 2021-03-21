@@ -13,6 +13,7 @@ import Admin from './components/Admin/Admin';
 import GetCakes from './components/Admin/GetCakes';
 import DeliveryInfo from './components/DeliveryInfo';
 import About from './components/Pages/About';
+import ProductList from './components/upload_product/ProductList'
 
 
   class App extends Component{
@@ -30,6 +31,7 @@ import About from './components/Pages/About';
                 <Route path='/GetCakes' component={GetCakes}/>
                 <Route path='/DeliveryInfo' component={DeliveryInfo}/>
                 <Route path='/About' component={About}/>
+                <Route path='/upload_product/ProductList' component={ProductList}/>
                
 
                
