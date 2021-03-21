@@ -1,9 +1,12 @@
 import React, { Fragment, useState } from "react";
 import { login } from '../Actions/Auth';
 import './CSS/form.css';
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import {  Redirect } from "react-router-dom";
 
 
-const Login = () => {
+const Login = ({ login, isAuthenticated, user }) => {
   const [formData, setFromData] = useState(
       {
           email: '',
@@ -21,6 +24,14 @@ const Login = () => {
 
     login(email, password)
 };
+if (isAuthenticated) {
+  if (user.role == "Admin")
+    return <Redirect to="/Admin" />;
+  else if (user.role == "Seller")
+    return <Redirect to="/upload_product/ProductList" />
+  else
+    console.log(user.role);
+}
 
 
 
@@ -60,4 +71,16 @@ const Login = () => {
   );
 };
 
-export default Login;
+
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user,
+});
+
+export default connect(mapStateToProps, { login })(Login);

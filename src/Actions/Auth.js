@@ -1,30 +1,40 @@
-import axois from 'axios';
+import axois from "axios";
 
-export const login = async (email, password) => {
-    
-    const config = {
-        headers: { "Content-Type": "application/json" }
-    };
+import {
+  
+  LOGIN_FAILED,
+  LOGIN_SUCCESS,
+ 
+} from "./types";
+import { setAlert } from "./alert";
 
-    const body = JSON.stringify({ email, password });
+export const login = (email, password) => async (dispatch) => {
+  const config = {
+    headers: { "Content-Type": "application/json" },
+  };
 
-    try {
-         await axois.post("https://localhost:44305/api/Logins", body, config)
-         .then(response => {
-            console.log(response)
-             return response.status
-            });
-            alert(" login succes");
-        
-         
-         
-         
-    } catch (error) {
-        alert(" Check your Email or Password");
-        console.log("catworking ");
-        
-    }
+  const body = JSON.stringify({ email, password });
+
+  try {
+    const res = await axois.post(
+        "https://localhost:44305/api/Logins",
+      body,
+      config
+    );
+
+    dispatch(setAlert("Login Successfull", "success"));
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data,
+    });
+  } catch (error) {
+    dispatch(setAlert("Invalid email or password", "danger"));
+    dispatch({
+      type: LOGIN_FAILED,
+    });
+  }
 };
+
 
 
 export const registerSeller = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {

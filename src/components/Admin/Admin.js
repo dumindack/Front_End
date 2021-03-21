@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 
 
 
+
 const Admin = () => {
 
     return (
         <Fragment>
+            <p className="admin">
+        ADMIN 
+      </p>
             <p className="admin">
         SELLERS IN CAKE WORLD <Link to="/GetSellers">Click</Link>
       </p>

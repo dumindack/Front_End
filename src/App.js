@@ -14,11 +14,14 @@ import GetCakes from './components/Admin/GetCakes';
 import DeliveryInfo from './components/DeliveryInfo';
 import About from './components/Pages/About';
 import ProductList from './components/upload_product/ProductList'
+import store from "./store";
+import { Provider } from "react-redux";
 
 
   class App extends Component{
     render(){
       return (
+        <Provider store={store}>
         <BrowserRouter>
           <div>
             <Navigationbar/>
@@ -47,7 +50,8 @@ import ProductList from './components/upload_product/ProductList'
             <Footer/>
           </div>
           
-        </BrowserRouter>    
+        </BrowserRouter>
+        </Provider>    
   );
   }
 }
