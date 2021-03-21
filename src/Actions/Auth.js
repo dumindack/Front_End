@@ -21,14 +21,14 @@ export const login = (email, password) => async (dispatch) => {
       body,
       config
     );
-    alert(" login succes");
+    
     dispatch(setAlert("Login Successfull", "success"));
     dispatch({
       type: LOGIN_SUCCESS,
       payload: res.data,
     });
   } catch (error) {
-    alert(" Check your Email or Password");
+    
     dispatch(setAlert("Invalid email or password", "danger"));
     dispatch({
       type: LOGIN_FAILED,
