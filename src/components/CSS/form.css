@@ -170,3 +170,14 @@ padding: 3px 20px;
 background:rgb(235, 102, 102);
 
 }
+
+.admin{
+  color: black;
+  font-size: 25px;
+  padding: 0.4rem;
+  margin: 1rem 0;
+  text-align: center;
+  
+  margin-bottom: 30px;
+  margin-right: 30px;
+}

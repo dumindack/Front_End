@@ -4,6 +4,9 @@ import './CSS/form.css';
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import {  Redirect } from "react-router-dom";
+import { setAlert } from '../Actions/alert';
+
+
 
 
 const Login = ({ login, isAuthenticated, user }) => {
@@ -21,13 +24,17 @@ const Login = ({ login, isAuthenticated, user }) => {
   const onSubmit = async e => {
     
     e.preventDefault();
-
+    if (email && password) {
     login(email, password)
+    }
+    else{
+      setAlert('Please fill all the fileds','warning');
+    }
 };
 if (isAuthenticated) {
-  if (user.role == "Admin")
+  if (user.role === "Admin")
     return <Redirect to="/Admin" />;
-  else if (user.role == "Seller")
+  else if (user.role === "Seller")
     return <Redirect to="/upload_product/ProductList" />
   else
     console.log(user.role);
@@ -74,7 +81,8 @@ if (isAuthenticated) {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
+  isAuthenticated: PropTypes.bool,
+  setAlert:PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
 };
 
@@ -83,4 +91,4 @@ const mapStateToProps = (state) => ({
   user: state.auth.user,
 });
 
-export default connect(mapStateToProps, { login })(Login);
+export default connect(mapStateToProps, { login ,setAlert })(Login);

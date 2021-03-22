@@ -8,14 +8,15 @@ const Admin = () => {
 
     return (
         <Fragment>
-            <p className="admin">
+            <p className="large">
         ADMIN 
       </p>
             <p className="admin">
         SELLERS IN CAKE WORLD <Link to="/GetSellers">Click</Link>
       </p>
+      
       <p className="admin">
-      CAKE TYPES IN CAKE WORLD <Link to="/GetCakes">Click</Link>
+      BUYERS IN CAKE WORLD <Link to="/GetBuyers">Click</Link>
       </p>
     </Fragment>
       );

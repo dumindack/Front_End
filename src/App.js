@@ -10,7 +10,7 @@ import Register from './components/Register';
 import Details from './components/Products/Details';
 import GetSellers from './components/Admin/GetSellers';
 import Admin from './components/Admin/Admin';
-import GetCakes from './components/Admin/GetCakes';
+import GetBuyers from './components/Admin/GetBuyers';
 import DeliveryInfo from './components/DeliveryInfo';
 import About from './components/Pages/About';
 import ProductList from './components/upload_product/ProductList'
@@ -31,7 +31,7 @@ import { Provider } from "react-redux";
                 <Route path='/Register' component={Register}/>
                 <Route path='/GetSellers' component={GetSellers}/>
                 <Route path='/Admin' component={Admin}/>
-                <Route path='/GetCakes' component={GetCakes}/>
+                <Route path='/GetBuyers' component={GetBuyers}/>
                 <Route path='/DeliveryInfo' component={DeliveryInfo}/>
                 <Route path='/About' component={About}/>
                 <Route path='/upload_product/ProductList' component={ProductList}/>

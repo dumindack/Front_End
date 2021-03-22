@@ -1,16 +1,20 @@
 import axois from "axios";
 
+
+
 import {
   
   LOGIN_FAILED,
   LOGIN_SUCCESS,
- 
+  
 } from "./types";
 import { setAlert } from "./alert";
 
+
+//USER LOGIN
 export const login = (email, password) => async (dispatch) => {
   const config = {
-    headers: { "Content-Type": "application/json" },
+    headers: { 'Content-Type': 'application/json' ,},
   };
 
   const body = JSON.stringify({ email, password });
@@ -27,6 +31,7 @@ export const login = (email, password) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       payload: res.data,
     });
+    
   } catch (error) {
     
     dispatch(setAlert("Invalid email or password", "danger"));
@@ -39,6 +44,8 @@ export const login = (email, password) => async (dispatch) => {
 };
 
 
+
+//USER REGISTRATION
 
 export const registerSeller = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {
     const config = {
