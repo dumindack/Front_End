@@ -36,6 +36,10 @@ if (isAuthenticated) {
     return <Redirect to="/Admin" />;
   else if (user.role === "Seller")
     return <Redirect to="/upload_product/ProductList" />
+    else if (user.role === "Buyer")
+    return <Redirect to="/" />
+
+  
   else
     console.log(user.role);
 }
@@ -81,10 +85,10 @@ if (isAuthenticated) {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
-  setAlert:PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
   user: PropTypes.object.isRequired,
 };
+
 
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,

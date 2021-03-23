@@ -16,6 +16,8 @@ import About from './components/Pages/About';
 import ProductList from './components/upload_product/ProductList'
 import store from "./store";
 import { Provider } from "react-redux";
+import PrivateRoute from './components/routing/PrivateRoute';
+import Alert from "./components/Layout/Alert";
 
 
   class App extends Component{
@@ -25,12 +27,13 @@ import { Provider } from "react-redux";
         <BrowserRouter>
           <div>
             <Navigationbar/>
+            <Alert />
               <div>
                 <Route exact path='/' component={Home}/>
                 <Route path='/Login' component={Login}/>
                 <Route path='/Register' component={Register}/>
                 <Route path='/GetSellers' component={GetSellers}/>
-                <Route path='/Admin' component={Admin}/>
+                <PrivateRoute exact path='/Admin' component={Admin}/>
                 <Route path='/GetBuyers' component={GetBuyers}/>
                 <Route path='/DeliveryInfo' component={DeliveryInfo}/>
                 <Route path='/About' component={About}/>

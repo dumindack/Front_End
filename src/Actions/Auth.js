@@ -2,13 +2,18 @@ import axois from "axios";
 
 
 
+
 import {
   
   LOGIN_FAILED,
   LOGIN_SUCCESS,
+  LOGOUT,
+  
+
   
 } from "./types";
 import { setAlert } from "./alert";
+
 
 
 //USER LOGIN
@@ -30,7 +35,9 @@ export const login = (email, password) => async (dispatch) => {
     dispatch({
       type: LOGIN_SUCCESS,
       payload: res.data,
+      
     });
+   
     
   } catch (error) {
     
@@ -41,6 +48,10 @@ export const login = (email, password) => async (dispatch) => {
     });
     
   }
+};
+
+export const logout = () => dispatch => {
+  dispatch({ type: LOGOUT });
 };
 
 
