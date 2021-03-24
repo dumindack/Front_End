@@ -42,7 +42,7 @@ import  { useEffect } from 'react';
                 <Route path='/GetBuyers' component={GetBuyers}/>
                 <Route path='/DeliveryInfo' component={DeliveryInfo}/>
                 <Route path='/About' component={About}/>
-                <Route path='/upload_product/ProductList' component={ProductList}/>
+                <PrivateRoute path='/upload_product/ProductList' component={ProductList}/>
                
 
                
