@@ -14,7 +14,8 @@ import React, { Fragment } from "react";
 
 
 
-const Navigationbar = ({ auth: { isAuthenticated }, logout }) =>{
+
+const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
   const authLinks = (
     <div class="custom-container">
         <nav class="navbar navbar-expand-sm navbar-custom">

@@ -3,17 +3,81 @@ import axois from "axios";
 
 
 
+
 import {
   
   LOGIN_FAILED,
   LOGIN_SUCCESS,
   LOGOUT,
+  USER_LOADED,
+  AUTH_ERROR,
+  
+
   
 
   
 } from "./types";
 import { setAlert } from "./alert";
 
+
+//load user
+export const loadUser = () => async (dispatch) => {
+  if (localStorage.token) {
+    const user= JSON.parse(atob(localStorage.token.split('.')[1]));
+
+    if (user.role ==="Seller") {
+      try {
+        const res = await axois.get (
+          `https://localhost:44305/api/Sellers/${user.id}`
+       
+        );
+        dispatch({
+          type: USER_LOADED,
+          payload: res.data,
+         });
+      } catch (error) {
+         dispatch({
+           type: AUTH_ERROR,
+       });
+       
+      }
+    }
+    else if (user.role ==="Admin") {
+      try {
+        const res = await axois.get (
+          `https://localhost:44305/api/Admins/${user.id}`
+        
+        );
+        dispatch({
+          type: USER_LOADED,
+          payload: res.data,
+         });
+      } catch (error) {
+         dispatch({
+           type: AUTH_ERROR,
+       });
+      }
+    }
+       else if (user.role ==="Buyer") {
+        try {
+          const res = await axois.get (
+            `https://localhost:44305/api/Buyers/${user.id}`
+         
+          );
+          dispatch({
+            type: USER_LOADED,
+            payload: res.data,
+           });
+        } catch (error) {
+           dispatch({
+             type: AUTH_ERROR,
+         });
+         
+        }
+      }
+
+      }
+};
 
 
 //USER LOGIN

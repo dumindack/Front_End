@@ -18,15 +18,20 @@ import store from "./store";
 import { Provider } from "react-redux";
 import PrivateRoute from './components/routing/PrivateRoute';
 import Alert from "./components/Layout/Alert";
+import {loadUser} from './Actions/Auth'
+import  { useEffect } from 'react';
 
 
-  class App extends Component{
-    render(){
+  const App = ()=>{
+    useEffect(()=>{
+      store.dispatch(loadUser())
+    }, []) 
+    
       return (
         <Provider store={store}>
         <BrowserRouter>
           <div>
-            <Navigationbar/>
+          <Route exact render={props=> <Navigationbar {...props}/>}/>
             <Alert />
               <div>
                 <Route exact path='/' component={Home}/>
@@ -57,6 +62,6 @@ import Alert from "./components/Layout/Alert";
         </Provider>    
   );
   }
-}
+
 
 export default App;
