@@ -37,9 +37,9 @@ import  { useEffect } from 'react';
                 <Route exact path='/' component={Home}/>
                 <Route path='/Login' component={Login}/>
                 <Route path='/Register' component={Register}/>
-                <Route path='/GetSellers' component={GetSellers}/>
+                <PrivateRoute path='/GetSellers' component={GetSellers}/>
                 <PrivateRoute exact path='/Admin' component={Admin}/>
-                <Route path='/GetBuyers' component={GetBuyers}/>
+                <PrivateRoute path='/GetBuyers' component={GetBuyers}/>
                 <Route path='/DeliveryInfo' component={DeliveryInfo}/>
                 <Route path='/About' component={About}/>
                 <PrivateRoute path='/upload_product/ProductList' component={ProductList}/>
