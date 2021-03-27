@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import './ProductCSS/Card.css'
 
 const Card = (props) => {
-    const { product, onAdd } = props;
+    const { product, addToCart } = props;
     
     
         return (
@@ -23,7 +23,7 @@ const Card = (props) => {
                             <Link to={`/products/${props.product.productID}`}>
                                 <button  className="cards-button1">View</button>
                             </Link>
-                            <button className="cards-button2" onClick={() => onAdd(product)}>add to Cart </button>
+                            <button className="cards-button2" onClick={() => addToCart(product)}>add to Cart </button>
                         </div>
                     </div>
                 </div>

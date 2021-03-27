@@ -11,7 +11,7 @@ function Products (props) {
     const [products, setProducts] = useState([]);
     const [Products, sortProducts] = useState([]);
     const [search, setSearch,] = useState('');
-    const { onAdd } = props;
+    const {addToCart} = props;
 
     const [cart, setCart] = useState([])
 
@@ -74,7 +74,7 @@ function Products (props) {
                             return (
                                 <div>
                                     <div >
-                                        <Card product={product}/>
+                                        <Card product={product} key={product.id} data={product}  addToCart={addToCart}/>
                                     </div>
                                 </div>
                             );
@@ -173,18 +173,14 @@ function Products (props) {
         <div>
             <div className="nav">
                 <div className="n-container">
-                <a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a>
-                <a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a>
-                <a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a>
-                <a></a><a></a><a></a><a></a><a></a>
-                    <a><input type="text" 
+                    <a>
+                        <input type="text" 
                         placeholder="Search for Cakes.."
                         onChange={handleChange}
                         />
                     </a>
-                   
+                    <a></a><a><a></a></a><a></a>
                     <a>
-                        <a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a>
                         <h>Choose From</h>       
                     </a>
                     <a>
@@ -206,7 +202,7 @@ function Products (props) {
             <br/>
                 <div >
                     <div>
-                        {renderfilteredProducts(currentItems,onAdd)}
+                        {renderfilteredProducts(currentItems)}
                     </div>
                     <br/>
                     <hr/>

@@ -5,38 +5,62 @@ import Products from '../Products/Products'
 
 const Home = () => {
 
-  const [cartItems, setCartItems] = useState([]);
-  const onAdd = (product) => {
-      const exist = cartItems.find((x) => x.id === product.id);
-      if (exist) {
-        setCartItems(
-          cartItems.map((x) =>
-            x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-          )
-        );
-      } else {
-        setCartItems([...cartItems, { ...product, qty: 1 }]);
+  const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
+    const [details, setDetails] = useState([]);
+ 
+   
+    useEffect(() => {
+      if(JSON.parse(localStorage.getItem("cart"))) {
+        setCart(JSON.parse(localStorage.getItem("cart")));
       }
-    };
-    const onRemove = (product) => {
-      const exist = cartItems.find((x) => x.id === product.id);
-      if (exist.qty === 1) {
-        setCartItems(cartItems.filter((x) => x.id !== product.id));
-      } else {
-        setCartItems(
-          cartItems.map((x) =>
-            x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-          )
-        );
+    }, [])
+
+
+    const addToCart = (item) => {
+    
+     const productList = [...cart];
+        
+          if(!productList.includes(item)) {
+            productList.push(item);
+          
+        }else{
+              alert("This product has been already added to cart.")
+          };
+        
+        
+        const index = productList.indexOf(item);
+        productList[index].quantity++;
+        setCart(productList);
+        localStorage.setItem("cart", JSON.stringify(productList));
+        
+    }
+
+
+    const changeQuantity = (item, e) => {
+      const productList = [...cart];
+      const index = productList.indexOf(item);
+      if(e === '+') {
+        productList[index].quantity++;
       }
-    };
+      else {
+        if(productList[index].quantity > 1) {
+          productList[index].quantity--;
+        }
+        else {
+          productList.splice(index, 1);
+        }
+      } 
+      setCart(productList);
+      localStorage.setItem("cart", JSON.stringify(productList));
+    }
      
         return (
             <div>
                 <Imageslide/>
 
                 <br/>
-                <Products onAdd={onAdd}/>
+                <Products addToCart={addToCart}/>
 
                 <br/>     
            

@@ -178,6 +178,30 @@ function Details(props){
 
 
 
+    const [cart, setCart] = useState([]);
+    useEffect(() => {
+        if(JSON.parse(localStorage.getItem("cart"))) {
+          setCart(JSON.parse(localStorage.getItem("cart")));
+        }
+      }, [])
+
+    const addToCart = (item) => {
+        const productList = [...cart];
+        if(!productList.includes(item)) {
+          productList.push(item);
+        }else{
+            alert("This product has been already added to cart.")
+        };
+        const index = productList.indexOf(item);
+        productList[index].quantity++;
+        setCart(productList);
+        localStorage.setItem("cart", JSON.stringify(productList));
+    }
+
+
+
+
+
     const users = { id: `${buyers.id}` ,token: `${localStorage.getItem('token')}` };
     const isAdmin = users.token !== 'null';
     const isBuyer = users.id >= 0;
@@ -215,7 +239,7 @@ function Details(props){
                         <hr/>
                         <p>{products.description}</p>
                         <hr/>
-                        <button className="button1" >add to Cart </button>
+                        <button className="button1" onClick={() => addToCart(products)} >add to Cart </button>
                     </div>
                 </div>
                 <div>
