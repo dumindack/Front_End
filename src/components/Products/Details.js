@@ -178,6 +178,12 @@ function Details(props){
 
 
 
+    const users = { id: `${buyers.id}` ,token: `${localStorage.getItem('token')}` };
+    const isAdmin = users.token !== 'null';
+    const isBuyer = users.id >= 0;
+    
+
+
         return (
             <div className="container">
                 <div className="details">
@@ -213,9 +219,7 @@ function Details(props){
                     </div>
                 </div>
                 <div>
-                    <a>add your  </a>
-                    <a className="button" href="#popup1"> review </a>
-                    <a>   here..</a>
+                    <a>{isAdmin && isBuyer && <a>add your  <a className="button" href="#popup1">review</a>  here..</a>}</a>
                 </div>
                 <hr/>
                 <div className="container-name">

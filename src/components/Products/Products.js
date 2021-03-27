@@ -61,15 +61,25 @@ function Products (props) {
             <div>
                 <div className="product-container">
                     <div className="pcard-list">
-                        {products.map(product => {
-                                return (
-                                    <div>
-                                        <div >
-                                            <Card product={product}/>
-                                        </div>
+                    {
+                        products.length === 0 
+                        ? 
+                        <div>
+                            <div>
+                                <p>There are no cake products as {search} </p>
+                            </div> 
+                        </div>
+                        :
+                    products.map(product => {
+                            return (
+                                <div>
+                                    <div >
+                                        <Card product={product}/>
                                     </div>
-                                );
-                        })} 
+                                </div>
+                            );
+                    })
+                    }
                     </div>
                 </div>
             </div>
