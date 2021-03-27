@@ -33,14 +33,14 @@ class About extends Component{
                 </div>
 
                 <div class="row">
-               <div class="column">
+               <div class="column column2">
                <img src="./images/making.jpg" alt="" width="100%" />    
                    
                 /</div>
 
 
 
-                <div class="column">
+                <div class="column column2">
                 <div class="column1">
 
                 <p><div class="p1">
@@ -60,7 +60,7 @@ class About extends Component{
 
                 <div class="row">
 
-                <div class="column">
+                <div class="column column2">
                 <div class="column1">
                    
                 <p><div class="p1">
@@ -79,7 +79,7 @@ online chats & emails and we’re open everyday of the week Monday to Sunday.
                 </p>
                 </div>
                 </div>
-               <div class="column">
+               <div class="column column2">
                <img src="./images/service.jpg" alt="" width="100%" />    
                    
                 </div>
@@ -97,14 +97,14 @@ online chats & emails and we’re open everyday of the week Monday to Sunday.
 
 
             <div class="row">
-               <div class="column">
+               <div class="column column2">
                <img src="./images/currier.jpg" alt="" width="100%" />    
                    
                 /</div>
 
 
 
-                <div class="column">
+                <div class="column column2">
                 <div class="column1">
 
                 <p><div class="p1">

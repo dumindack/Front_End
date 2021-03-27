@@ -7,6 +7,7 @@ import Footer from '../src/components/Footer';
 import Privacy from './components/Pages/Privacy';
 import Login from './components/Login';
 import Register from './components/Register';
+import Register1 from './components/Register1';
 import Details from './components/Products/Details';
 import GetSellers from './components/Admin/GetSellers';
 import Admin from './components/Admin/Admin';
@@ -20,6 +21,7 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import Alert from "./components/Layout/Alert";
 import {loadUser} from './Actions/Auth'
 import  { useEffect } from 'react';
+import Selection from './components/Selection';
 
 
   const App = ()=>{
@@ -43,7 +45,8 @@ import  { useEffect } from 'react';
                 <Route path='/DeliveryInfo' component={DeliveryInfo}/>
                 <Route path='/About' component={About}/>
                 <PrivateRoute path='/upload_product/ProductList' component={ProductList}/>
-               
+                <Route path='/Register1' component={Register1}/>
+                <Route path='/Selection' component={Selection}/>
 
                
               </div>

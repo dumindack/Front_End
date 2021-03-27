@@ -73,7 +73,7 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
                 <Link to="/Login">Login</Link>
                 
                 
-                <Link to="/Register">Register</Link>
+                <Link to="/Selection">Register</Link>
                 
                 
                 <Link to="/DeliveryInfo">Delivery Info</Link>
