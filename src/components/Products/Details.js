@@ -23,8 +23,8 @@ function Details(props){
       }, []);
 
 
+
       const [rates, setRates] = useState([]);
-      
       useEffect(() => {
         axios
           .get(
@@ -38,6 +38,7 @@ function Details(props){
       }, []);
 
 
+
     const [index, setIndex] = useState(0)
     const imgDiv = useRef();
 
@@ -49,9 +50,31 @@ function Details(props){
     }
 
 
+    
+    const [buyers, setBuyers] = useState([]);
+    useEffect(() => {
+      if (localStorage.token) {
+        const user= JSON.parse(atob(localStorage.token.split('.')[1]));
+        if (user.role ==="Buyer"){
+          axios.get(`https://localhost:44305/api/Buyers/${user.id}`)
+            .then(resp => {
+            setBuyers(resp.data)
+            console.log(resp.data);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+        }else{
+          console.log(`error`)
+        }
+      }
+    }, []);
+
+
+
     const [rate, setRate] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
-    
+
     useEffect(() => {
         refreshRate();
     }, [])
@@ -98,7 +121,8 @@ function Details(props){
         ID: 0,
         productID: '',
         Star: '',
-        userName: '',
+        buyerFirstName: '',
+        buyerLastName: '',
         comment: ''
     }
     
@@ -139,16 +163,19 @@ function Details(props){
             formData.append('productID', products.productID)
             formData.append('star', rating)
             formData.append('comment', values.comment)
-            formData.append('userName', values.userName)
+            formData.append('buyerFirstName', buyers.firstName)
+            formData.append('buyerLastName', buyers.lastName)
             addOrEdit(formData, resetForm)
         }
     }
  
    
+
     const [rating, setRating] = useState('0');
     const [hover, setHover] = useState(null);
 
     const average =  Math.round((rates.reduce((a,v) =>  a = a + v.star , 0 ))/(rates.length || rates.length >= 0) * 10 ) / 10;
+
 
 
         return (
@@ -201,7 +228,8 @@ function Details(props){
                                     <div onClick={() => { showRecordDetails(rate) }}>
                                     <table id="customers">
                                         <tr>
-                                            <th><h6>{rate.userName}</h6></th>
+                                            <th><a>{rate.buyerFirstName}</a>  <span><a>{rate.buyerLastName}</a></span></th>
+                                            <th></th> 
                                         </tr>
                                         <tr>
                                         {[...Array(5)].map((star, i) => {
@@ -240,15 +268,7 @@ function Details(props){
                                     <div>
                                         <div className="rating">
                                             <p>place your review</p>
-                                        </div>
-                                        <div>
-                                            <input
-                                                className="form-control"
-                                                placeholder="Enter your name..."
-                                                name="userName"
-                                                value={values.userName}
-                                                onChange={handleInputChange} />
-                                            </div>   
+                                        </div> 
                                             <div>
                                                 <div>
                                                     {[...Array(5)].map((star, i) => {

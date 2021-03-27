@@ -9,21 +9,21 @@ const Card = (props) => {
         return (
             <div>
                 <div >                 
-                     <div className="card">
+                     <div className="cards">
                         <Link to={`/products/${props.product.productID}`}>
-                            <img src={props.product.imageSrc}  className="card-image" alt="image/" />
+                            <img src={props.product.imageSrc}  className="cards-image" alt="image/" />
                         </Link>
                         <div className="txt-area">
                             <div className="txt-area1">
-                            <p className="card-title">{props.product.productName}</p>
+                            <p className="cards-title">{props.product.productName}</p>
                             </div>
                         </div>
                         <p className="price">Rs: {props.product.price}.00</p>
                         <div>
                             <Link to={`/products/${props.product.productID}`}>
-                                <button  className="card-button1">View</button>
+                                <button  className="cards-button1">View</button>
                             </Link>
-                            <button className="card-button2" onClick={() => onAdd(product)}>add to Cart </button>
+                            <button className="cards-button2" onClick={() => onAdd(product)}>add to Cart </button>
                         </div>
                     </div>
                 </div>

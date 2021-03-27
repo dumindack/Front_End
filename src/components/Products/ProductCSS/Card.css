@@ -1,4 +1,4 @@
-.card {
+.cards {
     display: grid;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -9,9 +9,9 @@
     margin-left: 5px;
     width: 270px;
   }
-  .card:hover{ box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1); }
+  .cards:hover{ box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1); }
   
-    .card-title {
+    .cards-title {
       margin-top: 9px;
       margin-bottom: 1px;
       font-family: 'Poppins', sans-serif;
@@ -35,14 +35,14 @@
       font-size: 18px;
     }
     
-   .card-image {
+   .cards-image {
      width: 250px;
      height: 250px;
      border-radius: 15px 10px 0px 0px;
    }
-   .card .card-image{ position: relative; }
+   .cards .cards-image{ position: relative; }
   
-   .card-button1 {
+   .cards-button1 {
      margin: 0.1rem;
      border-radius: 0.5rem;
      width: 100%;
@@ -56,9 +56,9 @@
      display: inline-block;
      font-size: 10px; 
    }
-  .card-button1:hover{background-color: rgb(189, 9, 54);}
+  .cards-button1:hover{background-color: rgb(189, 9, 54);}
   
-  .card-button2 {
+  .cards-button2 {
      margin: 0.1rem;
      border-radius: 0.5rem;
      width: 100%;
@@ -72,7 +72,7 @@
      display: inline-block;
      font-size: 10px;
    }
-   .card-button2:hover{background-color: rgb(109, 5, 141);}
+   .cards-button2:hover{background-color: rgb(109, 5, 141);}
   
    .cart-item {
      display: flex;
