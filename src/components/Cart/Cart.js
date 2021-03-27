@@ -64,7 +64,6 @@ const Cart = ({products, changeQuantity}) => {
                                 <button className="checkout-btn" onClick={checkout}>CHECKOUT</button>
                                 <button className="payment-btn">Payment</button>
                             </div>
-                            <div>{cartItemsLength}</div>
                         </div>
                     </div>
                 </div>
