@@ -36,7 +36,7 @@ import Selection from './components/Selection';
           <Route exact render={props=> <Navigationbar {...props}/>}/>
             <Alert />
               <div>
-                <Route exact path='/' component={Home}/>
+                <PrivateRoute exact path='/' component={Home}/>
                 <Route path='/Login' component={Login}/>
                 <Route path='/Register' component={Register}/>
                 <PrivateRoute path='/GetSellers' component={GetSellers}/>
