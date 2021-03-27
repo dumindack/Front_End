@@ -32,8 +32,8 @@ const Login = ({ login, isAuthenticated, user }) => {
     }
 };
 if (isAuthenticated) {
-  if (user.role === "/")
-    return <Redirect to="/Admin" />;
+  if (user.role === "Admin")
+    return <Redirect to="/GetSellers" />;
   else if (user.role === "Seller")
     return <Redirect to="/upload_product/ProductList" />
     else if (user.role === "Buyer")
