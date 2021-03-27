@@ -120,7 +120,7 @@ export const logout = () => dispatch => {
 
 
 
-//USER REGISTRATION
+//Seller REGISTRATION
 
 export const registerSeller = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {
     const config = {
@@ -153,5 +153,40 @@ export const registerSeller = async (FirstName, LastName, Address, Gender,Email,
 
 
    
+
+};
+
+//BUYER REGISTRATION
+export const registerBuyer = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {
+  const config = {
+      headers: { "Content-Type": "application/json" }
+  };
+
+  const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd});
+
+  if (Password!= Repasswerd){
+      alert("Password didn't Matched Try again..")
+  }
+
+  else {
+
+
+      try {
+          await axois.post("https://localhost:44305/api/Buyers", body, config);
+          alert("Your are registerd ");
+  
+      } catch (error) {
+          alert("Please Check Your Information again ");
+          console.log(error);
+          
+      }
+
+
+
+
+  }
+
+
+ 
 
 };

@@ -23,11 +23,11 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
         <div class="topnav">
               <div class="topnav-right">
               <Link to="/" class="navbar-brand">Home</Link>
-              <Link to="/About" class="nav-link">About</Link>
-              <Link to="/upload_product/ProductList">My Profile</Link>
+              <Link to="/About" class="navbar-brand">About</Link>
+              <Link to="/upload_product/ProductList"  class="navbar-brand">My Profile</Link>
 
                 
-                <Link to="/DeliveryInfo">Delivery Info</Link>
+                <Link to="/DeliveryInfo" class="navbar-brand">Delivery Info</Link>
        
                   <div className="carticon">
                     
@@ -50,6 +50,42 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
       </nav>
       </div>
   );
+
+
+
+  const adminLinks = (
+    <div class="custom-container">
+        <nav class="navbar navbar-expand-sm navbar-custom">
+        <div class="topnav">
+              <div class="topnav-right">
+              <Link to="/" class="navbar-brand">Home</Link>
+              <Link to="/GetSellers" class="navbar-brand">Sellers</Link>
+              <Link to="/GetBuyers"  class="navbar-brand">Buyers</Link>
+
+                
+                <Link to="/DeliveryInfo" class="navbar-brand">Delivery Info</Link>
+       
+                  <div className="carticon">
+                    
+                    <div>
+                      
+                    
+                     
+                    </div>
+                </div>
+                
+   
+      
+        <a onClick={logout} href="#!">
+        <span >Logout</span>
+          </a>
+        
+     </div>
+     </div>
+      </nav>
+      </div>
+  );
+
   const guestLinks = (
 <div class="custom-container">
         <nav class="navbar navbar-expand-sm navbar-custom">
@@ -91,8 +127,8 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
         </div>
     </div>
   ) 
-
-            
+ 
+         
      return (
     <nav className="navigationbar">
       <h1>
@@ -101,7 +137,7 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
         </Link>
       </h1>
       <Fragment>
-      <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+      <Fragment>  {isAuthenticated && !loading ? ((user.role=='Admin') ? adminLinks:authLinks):guestLinks}</Fragment>
       </Fragment>
     </nav>
   );
@@ -115,10 +151,15 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
 Navigationbar.propTypes = {
   logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth
+    auth: state.auth,
+   user: state.auth.user,
 });
 
 export default connect(mapStateToProps, { logout })(Navigationbar);
+
+
+

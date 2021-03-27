@@ -2,7 +2,10 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import './CSS/form.css';
 
-import { registerSeller } from '../Actions/Auth';
+
+import { registerBuyer } from '../Actions/Auth';
+
+
 
 const Register = () => {
   const [formData, setFromData] = useState(
@@ -24,7 +27,8 @@ const Register = () => {
  const onSubmit = async e => {
    
     e.preventDefault();
-    registerSeller(FirstName, LastName, Address, Gender,Email,MobileNumber,Password, Repasswerd);
+    registerBuyer(FirstName, LastName, Address, Gender,Email,MobileNumber,Password, Repasswerd);
+    
     
 
 
@@ -36,6 +40,9 @@ const Register = () => {
       <p className="lead">
         <i className="text-middle" />
       </p>
+
+
+
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <small className="form-text">First Name</small>
@@ -129,17 +136,20 @@ const Register = () => {
           />
         </div>
         
-
-        <div class="row row1">
+<div class="row row1">
         
-        <div class="column column0"> <input type="submit" className="btn btn-primary" value="Register As Seller" /> </div>
+        <div class="column column0"> <input type="submit" className="btn btn-primary" value="Register As Buyer" /> </div>
         </div>
       </form>
+
       <p className="hv-acnt">
         If You have an account? <Link to="/login">Login</Link>
       </p>
     </Fragment>
   );
 };
+
+
+
 
 export default Register;
