@@ -32,7 +32,7 @@ const Login = ({ login, isAuthenticated, user }) => {
     }
 };
 if (isAuthenticated) {
-  if (user.role === "Admin")
+  if (user.role === "/")
     return <Redirect to="/Admin" />;
   else if (user.role === "Seller")
     return <Redirect to="/upload_product/ProductList" />
