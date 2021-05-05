@@ -48,7 +48,7 @@ import CartProducts from './components/Cart/CartProducts';
                 <PrivateRoute path='/upload_product/ProductList' component={ProductList}/>
                 <Route path='/Register1' component={Register1}/>
                 <Route path='/Selection' component={Selection}/>
-                <Route path='/CartProducts' component={CartProducts}/>
+                <PrivateRoute path='/CartProducts' component={CartProducts}/>
 
                
               </div>

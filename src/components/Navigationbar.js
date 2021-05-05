@@ -47,6 +47,17 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
         
      </div>
      </div>
+     <a class="right" href="#">
+          <div>
+              <img
+                  src={icon}  
+                  height="90"
+                  width="500"
+                  
+                 
+              />
+              </div> 
+              </a>
       </nav>
       </div>
   );
@@ -82,6 +93,17 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
         
      </div>
      </div>
+     <a class="right" href="#">
+          <div>
+              <img
+                  src={icon}  
+                  height="90"
+                  width="500"
+                  
+                 
+              />
+              </div> 
+              </a>
       </nav>
       </div>
   );
@@ -105,7 +127,18 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
             <div class="topnav">
               <div class="topnav-right">
 
-         
+                
+              <a class="navbar-brand" href="#">
+          <div>
+              <img
+                  src={icon}  
+                  height="50"
+                  width="200"
+                  
+                 
+              />
+              </div> 
+              </a>
                 <Link to="/Login">Login</Link>
                 
                 

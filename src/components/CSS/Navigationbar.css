@@ -104,5 +104,13 @@
     width: 100%;
     
   }
+  .right{
+    text-align: right;
+    display: block;
+    justify-content: right;
+    align-items: right;
+    margin: auto;
+    width: 100%;
+  }
 
 
