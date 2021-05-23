@@ -1,9 +1,8 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import icon from '../Media/logo/logo.png';
-import './CSS/Navigationbar.css'
-import text from '../Media/logo/text.png'
-import Carticon from '../Media/icon/carticon.svg'
+import './CSS/Navigationbar.css';
+import Carticon from '../Media/icon/carticon.svg';
 import { Link } from "react-router-dom";
 import { logout } from "../Actions/Auth";
 import { connect } from 'react-redux';
@@ -72,27 +71,16 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
               <Link to="/" class="navbar-brand">Home</Link>
               <Link to="/GetSellers" class="navbar-brand">Sellers</Link>
               <Link to="/GetBuyers"  class="navbar-brand">Buyers</Link>
+              <Link to= "/AddRegistration" class = "navbar-brand">Add</Link>
 
                 
-                <Link to="/DeliveryInfo" class="navbar-brand">Delivery Info</Link>
-       
-                  <div className="carticon">
-                    
-                    <div>
-                      
-                    
-                     
-                    </div>
-                </div>
-                
-   
-      
+
         <a onClick={logout} href="#!">
         <span >Logout</span>
           </a>
-        
+          </div>  
      </div>
-     </div>
+    
      <a class="right" href="#">
           <div>
               <img

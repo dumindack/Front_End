@@ -23,6 +23,8 @@ import {loadUser} from './Actions/Auth'
 import  { useEffect } from 'react';
 import Selection from './components/Selection';
 import CartProducts from './components/Cart/CartProducts';
+import AddRegistration from './components/AddRegistration';
+
 
 
   const App = ()=>{
@@ -49,6 +51,7 @@ import CartProducts from './components/Cart/CartProducts';
                 <Route path='/Register1' component={Register1}/>
                 <Route path='/Selection' component={Selection}/>
                 <PrivateRoute path='/CartProducts' component={CartProducts}/>
+                <PrivateRoute path='/AddRegistration' component={AddRegistration}/>
 
                
               </div>
