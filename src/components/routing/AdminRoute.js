@@ -8,7 +8,7 @@ const AdminRoute = ({ component: Component, auth: { isAuthenticated, loading, us
 
     <Component {...props} /> :( <Redirect to="/GetSellers" />)
     ):  (
-   (<Redirect to='/GetSellers' />)
+   (<Redirect to='/Login' />)
  
 )
     }

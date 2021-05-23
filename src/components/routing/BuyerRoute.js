@@ -8,7 +8,7 @@ const BuyerRoute = ({ component: Component, auth: { isAuthenticated, loading, us
 
     <Component {...props} /> :( <Redirect to="/" />)
     ):  (
-   (<Redirect to='/' />)
+   (<Redirect to='/Login' />)
  
 )
     }

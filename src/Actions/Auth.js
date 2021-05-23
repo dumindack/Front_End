@@ -122,12 +122,12 @@ export const logout = () => dispatch => {
 
 //Seller REGISTRATION
 
-export const registerSeller = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {
+export const registerSeller = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd,Role) => {
     const config = {
         headers: { "Content-Type": "application/json" }
     };
 
-    const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd});
+    const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd,Role});
 
     if (Password!= Repasswerd){
         alert("Password didn't Matched Try again..")
@@ -157,12 +157,12 @@ export const registerSeller = async (FirstName, LastName, Address, Gender,Email,
 };
 
 //BUYER REGISTRATION
-export const registerBuyer = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {
+export const registerBuyer = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd,Role) => {
   const config = {
       headers: { "Content-Type": "application/json" }
   };
 
-  const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd});
+  const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd,Role});
 
   if (Password!= Repasswerd){
       alert("Password didn't Matched Try again..")
@@ -194,12 +194,12 @@ export const registerBuyer = async (FirstName, LastName, Address, Gender,Email,M
 
 //REGISTER ADMIN
 
-export const registerAdmin = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd) => {
+export const registerAdmin = async (FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd,Role) => {
   const config = {
       headers: { "Content-Type": "application/json" }
   };
 
-  const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd});
+  const body = JSON.stringify({ FirstName, LastName, Address, Gender,Email,MobileNumber,Password,Repasswerd,Role});
 
   if (Password!= Repasswerd){
       alert("Password didn't Matched Try again..")

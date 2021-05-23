@@ -15,16 +15,17 @@ const Register = () => {
         MobileNumber: '',
         Password: '',
         Repasswerd: '',
+        Role:'Seller',
     });
 
-  const {FirstName, LastName, Address, Gender,Email,MobileNumber,Password,  Repasswerd} = formData;
+  const {FirstName, LastName, Address, Gender,Email,MobileNumber,Password,  Repasswerd,Role} = formData;
 
   const onChange = e => setFromData({ ...formData, [e.target.name]: e.target.value })
 
  const onSubmit = async e => {
    
     e.preventDefault();
-    registerSeller(FirstName, LastName, Address, Gender,Email,MobileNumber,Password, Repasswerd);
+    registerSeller(FirstName, LastName, Address, Gender,Email,MobileNumber,Password, Repasswerd,Role);
     
 
 
@@ -128,6 +129,7 @@ const Register = () => {
             onChange={e => onChange(e)}
           />
         </div>
+       
         
 
         <div class="row row1">
