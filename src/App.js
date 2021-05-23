@@ -18,6 +18,9 @@ import ProductList from './components/upload_product/ProductList'
 import store from "./store";
 import { Provider } from "react-redux";
 import PrivateRoute from './components/routing/PrivateRoute';
+import AdminRoute from './components/routing/AdminRoute';
+import SellerRoute from './components/routing/SellerRoute';
+import BuyerRoute from './components/routing/BuyerRoute';
 import Alert from "./components/Layout/Alert";
 import {loadUser} from './Actions/Auth'
 import  { useEffect } from 'react';
@@ -42,16 +45,15 @@ import AddRegistration from './components/AddRegistration';
                 <PrivateRoute exact path='/' component={Home}/>
                 <Route path='/Login' component={Login}/>
                 <Route path='/Register' component={Register}/>
-                <PrivateRoute path='/GetSellers' component={GetSellers}/>
-                <PrivateRoute exact path='/Admin' component={Admin}/>
-                <PrivateRoute path='/GetBuyers' component={GetBuyers}/>
+                <AdminRoute path='/GetSellers' component={GetSellers}/>
+                <AdminRoute path='/GetBuyers' component={GetBuyers}/>
                 <Route path='/DeliveryInfo' component={DeliveryInfo}/>
                 <Route path='/About' component={About}/>
-                <PrivateRoute path='/upload_product/ProductList' component={ProductList}/>
+                <SellerRoute path='/upload_product/ProductList' component={ProductList}/>
                 <Route path='/Register1' component={Register1}/>
                 <Route path='/Selection' component={Selection}/>
-                <PrivateRoute path='/CartProducts' component={CartProducts}/>
-                <PrivateRoute path='/AddRegistration' component={AddRegistration}/>
+                <BuyerRoute path='/CartProducts' component={CartProducts}/>
+                <AdminRoute path='/AddRegistration' component={AddRegistration}/>
 
                
               </div>
