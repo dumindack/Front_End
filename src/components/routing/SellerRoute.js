@@ -8,7 +8,7 @@ const SellerRoute = ({ component: Component, auth: { isAuthenticated, loading, u
 
     <Component {...props} /> :( <Redirect to="/upload_product/ProductList" />)
     ):  (
-   (<Redirect to='/login' />)
+   (<Redirect to='/' />)
  
 )
     }

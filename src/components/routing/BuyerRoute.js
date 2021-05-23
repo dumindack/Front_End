@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const BuyerRoute = ({ component: Component, auth: { isAuthenticated, loading, user}, ...rest }) => (
-    <Route {...rest} render={props => isAuthenticated && !loading ? ((user.role== 'Buyer') ?
+    <Route {...rest} render={props => isAuthenticated && !loading ? ((user.role==='Buyer') ?
 
     <Component {...props} /> :( <Redirect to="/" />)
     ):  (
-   (<Redirect to='/login' />)
+   (<Redirect to='/' />)
  
 )
     }
