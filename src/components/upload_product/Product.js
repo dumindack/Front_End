@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../CSS/form.css';
+import axios from 'axios'
 
 
 const defaultImageSrc = '/img/image_placeholder.png'
@@ -14,6 +15,7 @@ const initialFieldValues = {
     imageSrc: defaultImageSrc,
     imageFile: null
 }
+
 
 export default function Product(props) {
 
@@ -73,6 +75,26 @@ export default function Product(props) {
         setErrors({})
     }
 
+    const [sellers, setSellers] = useState([]);
+    useEffect(() => {
+      if (localStorage.token) {
+        const user= JSON.parse(atob(localStorage.token.split('.')[1]));
+        if (user.role ==="Seller"){
+          axios.get(`https://localhost:44305/api/Sellers/${user.id}`)
+            .then(resp => {
+            setSellers(resp.data)
+            console.log(resp.data);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+        }else{
+          console.log(`error`)
+        }
+      }
+    }, []);
+
+
     const handleFormSubmit = e => {
         e.preventDefault()
         if (validate()) {
@@ -84,6 +106,7 @@ export default function Product(props) {
             formData.append('category', values.category)
             formData.append('description', values.description)
             formData.append('imageFile', values.imageFile)
+            formData.append('sellerID', sellers.id)
             addOrEdit(formData, resetForm)
         }
     }

@@ -11,9 +11,30 @@ export default function ProductList() {
         refreshProductList();
     }, [])
 
+
+    const [sellers, setSellers] = useState([]);
+    useEffect(() => {
+      if (localStorage.token) {
+        const user= JSON.parse(atob(localStorage.token.split('.')[1]));
+        if (user.role ==="Seller"){
+          axios.get(`https://localhost:44305/api/Sellers/${user.id}`)
+            .then(resp => {
+            setSellers(resp.data)
+            console.log(resp.data);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+        }else{
+          console.log(`error`)
+        }
+      }
+    }, []);
+
+
     const productAPI = (url = 'https://localhost:44305/api/Product/') => {
         return {
-            fetchAll: () => axios.get(url),
+            fetchAll: () => axios.get(`https://localhost:44305/api/Product/Sellers/${sellers.id}`),
             create: newRecord => axios.post(url, newRecord),
             update: (id, updatedRecord) => axios.put(url + id, updatedRecord),
             delete: id => axios.delete(url + id)
