@@ -27,6 +27,8 @@ import  { useEffect } from 'react';
 import Selection from './components/Selection';
 import CartProducts from './components/Cart/CartProducts';
 import AddRegistration from './components/AddRegistration';
+import AcceptList from './components/Accept/AcceptList';
+
 
 
 
@@ -54,6 +56,7 @@ import AddRegistration from './components/AddRegistration';
                 <Route path='/Selection' component={Selection}/>
                 <BuyerRoute path='/CartProducts' component={CartProducts}/>
                 <AdminRoute path='/AddRegistration' component={AddRegistration}/>
+                <Route path='/Accept/AcceptList' component={AcceptList}/>
 
                
               </div>

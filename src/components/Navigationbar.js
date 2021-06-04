@@ -72,6 +72,7 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
               <Link to="/GetSellers" class="navbar-brand">Sellers</Link>
               <Link to="/GetBuyers"  class="navbar-brand">Buyers</Link>
               <Link to= "/AddRegistration" class = "navbar-brand">Add</Link>
+              <Link to= "/Accept/AcceptList" class = "navbar-brand">Products</Link>
 
                 
 
