@@ -1,0 +1,21 @@
+.or-cart-items-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .or-item-title {
+    color: rgb(202, 8, 121);
+    font-weight: bolder;
+    font-size: 8px;
+    text-transform: uppercase;
+  }
+  
+  .or-item-quantity {
+    color: rgb(85, 85, 85);
+    font-size: 0.8rem;
+  }
+  
+  .or-cart-item-price {
+    color: #5f059b;
+    font-size: 0.8rem;
+  }
