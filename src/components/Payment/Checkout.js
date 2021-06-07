@@ -90,7 +90,7 @@ class Checkout extends Component  {
     if(res.data ==="Success")
     {
       alert("Payment is successful!")
-     /* this.props.history.push(
+      this.props.history.push(
         {
           pathname:'/Receipt',
           state:{
@@ -99,7 +99,7 @@ class Checkout extends Component  {
                 cardNo:data.cardNo,
                 billDate:data.billDate,
                 email:data.email} 
-        });*/
+        });
         
     }
   })

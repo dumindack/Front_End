@@ -219,7 +219,7 @@ function Order(props) {
 
 
  
-console.log(values)
+
 
 
 
