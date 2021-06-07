@@ -29,6 +29,7 @@ import CartProducts from './components/Cart/CartProducts';
 import AddRegistration from './components/AddRegistration';
 import AcceptList from './components/Accept/AcceptList';
 import Order from './components/Order/Order';
+import Checkout from './components/Payment/Checkout';
 
 
 
@@ -70,7 +71,8 @@ import Order from './components/Order/Order';
           </div>
 
           <div>
-          <Route path="/Order" component={Order}/>
+            <Route path="/Order" component={Order}/>
+            <Route path="/Checkout" component={Checkout}/>
           </div>
 
           <div>
