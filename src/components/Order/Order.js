@@ -1,13 +1,12 @@
 import React, {useState , useEffect, useRef,  Component} from 'react'
-import axios from 'axios'
-import './Order.css'
-import './PayForm.css'
-import './PopupOrder.css'
-import './Radio.css'
-import cardpayment from '../../Media/icon/cardpayment.png'
+import axios from 'axios';
+import cardpayment from '../../Media/icon/cardpayment.png';
 import { Link} from "react-router-dom";
 import CartDetails from './CartDetails';
-import './Popup1.css'
+import './Order.css';
+import './PayForm.css';
+import './Radio.css';
+import './Popup1.css';
 
 function Order(props) {
 

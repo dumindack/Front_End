@@ -30,6 +30,8 @@ import AddRegistration from './components/AddRegistration';
 import AcceptList from './components/Accept/AcceptList';
 import Order from './components/Order/Order';
 import Checkout from './components/Payment/Checkout';
+import Receipt from './components/Receipts/Receipt';
+import CoD from './components/Receipts/CoD';
 
 
 
@@ -73,6 +75,8 @@ import Checkout from './components/Payment/Checkout';
           <div>
             <Route path="/Order" component={Order}/>
             <Route path="/Checkout" component={Checkout}/>
+            <Route path="/Receipt" component={Receipt}/>
+            <Route path="/CoD" component={CoD}/>
           </div>
 
           <div>

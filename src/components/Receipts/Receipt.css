@@ -1,0 +1,109 @@
+.Rec-box{
+    width: 41%;
+    min-height: 5px;
+    background: #ffffff;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+
+    
+    margin: auto;
+    transition: 0.5s linear;
+  }
+  
+  .Order-sum{
+    width:auto;
+    min-height: 5px;
+    background: #ffffff;
+    border: 1px solid rgba(77, 1, 80, 0.5);
+    overflow: hidden;
+    padding: 10px;
+    margin: auto;
+    transition: 0.5s linear;
+  }
+  .Order-sum>h4{
+    text-transform: uppercase;
+    color: rgb(104, 1, 136);
+  }
+  .re-container{
+    width: 100%;
+    height: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+  }
+
+  #mid, #bot{
+      border-bottom: 1px solid #EEE;
+  }
+  
+  #mid{min-height: 80px;} 
+  #bot{ min-height: 50px;}
+  
+  .info{
+      display: block;
+      margin-left: 0;
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .tabletitle{
+      background: rgb(255, 255, 255);
+      font-weight: 600;
+    }
+
+
+  
+    .service{border-bottom: 1px solid #EEE;
+    background-color: rgb(255, 255, 255);
+}
+    .item{
+        background-color: rgb(255, 255, 255);
+        width: auto;
+      }
+    .itemtext{font-size: 1.1em;}
+  
+    table{
+      padding: 10px 80px;
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+.logo-container {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.logo {
+  margin-left: 30%;
+}
+
+.info-container{
+  width: 50%;
+  float: right;
+  background-color: rgb(255, 255, 255) ;
+}
+.rec-container{
+  background-color: rgb(255, 255, 255);
+  width: auto;
+}
+
+#content{
+  width: 595px;
+}
+
+.hm-btn{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #ffffff;
+  border-radius: 5px;
+  color: rgb(117, 117, 117);
+  font-size: 15px;
+}
+.hm-btn:hover{
+  cursor: pointer;
+  background: #707070;
+  color: rgb(255, 255, 255);
+}
