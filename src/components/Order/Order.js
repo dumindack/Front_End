@@ -209,9 +209,8 @@ function Order(props) {
     var str = `${buyers.lastName}`;
     var last = str.charAt(0).toUpperCase();
 
-    var OrderNo = "#" + "00" + localStorage.getItem('CartQuantity')+ first + last + buyers.id;
-
-    
+    var OrderNo = "#" + "00" + localStorage.getItem('CartQuantity')+ first + 0 + last + buyers.id;
+    localStorage.setItem("orderNo", OrderNo)
   
     
     let paymentState = ["card", "cash on delivery"];
@@ -386,15 +385,13 @@ const handleFormSubmit1 = e => {
 
 
 const [isOpen, setIsOpen] = useState(false);
+const [isOpen1, setIsOpen1] = useState(false);
  
   const togglePopup = () => {
     if(display === "card")
-    {setIsOpen(!isOpen);}
+      {setIsOpen(!isOpen);}
     else{
-      
-      props.history.push({
-        pathname: "/CoD"
-      })
+      {setIsOpen1(!isOpen1);}
     }
   }
 
@@ -417,6 +414,23 @@ const [isOpen, setIsOpen] = useState(false);
                                     <h5>continue your order.....</h5>
                                       <Link to="/Checkout">
                                           <button  className="pp-pay-btn">payment</button>
+                                      </Link>
+                                  </div>
+                                </div>
+                            </div>
+                          </>
+                        }
+                      </div>
+
+                      <div>
+                        {isOpen1 && 
+                          <>
+                            <div  className="popup-box">
+                                <div  className="box">
+                                  <div className="pop-container">
+                                    <h5>continue your order.....</h5>
+                                      <Link to="/CoD">
+                                          <button  className="pp-pay-btn">continue on cash on delivery</button>
                                       </Link>
                                   </div>
                                 </div>
