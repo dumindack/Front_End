@@ -1,5 +1,7 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, {useState , useEffect, Fragment} from 'react'
+import axios from 'axios'
 import CartItem from './CartItem'
+import { Link } from "react-router-dom";
 
 
 
@@ -27,7 +29,34 @@ const Cart = ({products, changeQuantity}) => {
     }
     
     const cartItemsLength = products.length;
+    localStorage.setItem("CartQuantity", cartItemsLength);
 
+
+    const [buyers, setBuyers] = useState([]);
+    useEffect(() => {
+      if (localStorage.token) {
+        const user= JSON.parse(atob(localStorage.token.split('.')[1]));
+        if (user.role ==="Buyer"){
+          axios.get(`https://localhost:44305/api/Buyers/${user.id}`)
+            .then(resp => {
+            setBuyers(resp.data)
+            console.log(resp.data);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+        }else{
+          console.log(`error`)
+        }
+      }
+    }, []);
+
+    const users = { id: `${buyers.id}` ,token: `${localStorage.getItem('token')}` };
+    const isLog = users.token !== 'null';
+    const isBuyer = users.id >= 0;
+    const notLog = users.token === 'null';
+
+    
     return (
         <Fragment>
             <div  className={classActive ? "active" : ""}>
@@ -52,8 +81,7 @@ const Cart = ({products, changeQuantity}) => {
                                 )
                             })
                         }
-                    </div>
-
+                    </div> 
                     <div className="cart-container">
                         <div className="checkout-div">
                             <div className="checkout">
@@ -62,14 +90,26 @@ const Cart = ({products, changeQuantity}) => {
                                         <p className="subtotal-price">Rs: {sum.toFixed(2)}</p>
                                     </div>
                                 <button className="checkout-btn" onClick={checkout}>CHECKOUT</button>
-                                <button className="payment-btn">Payment</button>
+                                <Link to="/Order">
+                                    <a>{isLog && isBuyer && <a><button className="payment-btn">Order Now</button></a>}</a> 
+                                </Link>
+                                <Link to="/Login">
+                                    <a>{notLog && <a><button className="payment-btn">To complete the order, please Login here</button></a>}</a>
+                                </Link>
+                                <div>
+                    
+                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </Fragment>
+        
     )
+    
 }
+
 
 export default Cart;

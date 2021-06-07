@@ -28,6 +28,7 @@ import Selection from './components/Selection';
 import CartProducts from './components/Cart/CartProducts';
 import AddRegistration from './components/AddRegistration';
 import AcceptList from './components/Accept/AcceptList';
+import Order from './components/Order/Order';
 
 
 
@@ -57,6 +58,7 @@ import AcceptList from './components/Accept/AcceptList';
                 <BuyerRoute path='/CartProducts' component={CartProducts}/>
                 <AdminRoute path='/AddRegistration' component={AddRegistration}/>
                 <Route path='/Accept/AcceptList' component={AcceptList}/>
+               
 
                
               </div>
@@ -65,6 +67,10 @@ import AcceptList from './components/Accept/AcceptList';
           <div>
             <Route path="/Privacy" component={Privacy}/>
             <Route path="/products/:productID" component={Details}/>
+          </div>
+
+          <div>
+          <Route path="/Order" component={Order}/>
           </div>
 
           <div>

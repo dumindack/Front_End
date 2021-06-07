@@ -1,0 +1,255 @@
+
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #242323;
+  
+  }
+  .or-container{
+    width: 100%;
+    height: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #b8b8b82f;
+  }
+  
+  @media (min-width: 1200px)
+  {
+    .or-container{
+      max-width: 1140px;
+      height: auto;
+    }
+  }
+  .d-flex{
+    display: flex;
+    flex-direction: row;;
+    border-radius: 0 0 5px 5px;
+    padding: 25px;
+  }
+  form{
+    flex: 4;
+  }
+  .Yorder{
+    flex: 2.5;
+  }
+  .or-title{
+    border-radius:5px 5px 0 0 ;
+    padding: 20px;
+    color: #4d005c;
+  }
+  h2{
+    margin: 0;
+    text-transform: uppercase;
+    opacity: 0.8;
+    color:#cc0662;
+  }
+  h3{
+    float: right;
+    margin-right: 5px;
+    color:#cc0662;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  
+  h6{
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    font-weight: 600;
+    opacity: 0.6;
+    color: #6e0658;
+  }
+  
+  h7{
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.6;
+    color: #6e0658;
+  }
+  
+  h{
+    font-family:sans-serif;
+    margin-left: 83%;
+    color: #0707078c;
+    font-size: 16px;
+  }
+  .required{
+    color: red;
+  }
+  /*label, table{
+    display: block;
+    margin: 15px;
+  }
+  label>span{
+    float: left;
+    width: 25%;
+    margin-top: 12px;
+    padding-right: 10px;
+    font-size: 11px;
+  }*/
+  input[type="text"], input[type="tel"], input[type="email"], select
+  {
+    display: block;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 50%;
+    font-size: 11px;
+      padding: 4px;
+      border-radius: 0px;
+      -webkit-border-radius:0px;
+      -moz-border-radius:0px;
+      border: 2px solid #fff;
+      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.33);
+      -moz-box-shadow: inset 0px ppx 1px 1px rgba(0, 0, 0, 0.33);
+      -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.33);
+  }
+  select{
+    width: 72%;
+    height: 45px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+  .Yorder{
+    height: auto;
+    padding: 15px;
+    border: 1px solid #dadada;
+  }
+  table{
+    margin: 0;
+    padding: 0;
+  }
+  th{
+    border-bottom: 1px solid #dadada;
+  }
+  tr>td:nth-child(1){
+    text-align: left;
+    color: #41035a;
+    font-size: 12px;
+  }
+  tr>td:nth-child(2){
+    text-align: left;
+    color: #cc0662;
+    font-size: 15px;
+  }
+  td{
+    border-bottom: 1px solid #dadada;
+    padding: 5px 12px 4px 0;
+  }
+  
+  p{
+    display: block;
+    color: #888;
+    margin: 0;
+    padding-left: 25px;
+  }
+  .Yorder>div{
+    padding: 15px 0; 
+  }
+  
+  button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background: #b80090;
+    color: #fff;
+    font-size: 15px;
+  }
+  button:hover{
+    cursor: pointer;
+    background: #6e0658;
+  }
+  
+  input[type="radio"]{
+      color: #000;
+  }
+  
+  .continue{
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background: #b80090;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  .continue:hover{
+    cursor: pointer;
+    background: #6e0658;
+  }
+  
+  
+  
+  
+  [type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  
+  body {
+    font-size: small;
+  }
+  .label {
+    display: block;
+  }
+  input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 190px;
+  }
+  
+  
+  .pay-card {
+    margin-left: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50%;
+  }
+  
+  .pay-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  
+  
+  .pay-img{
+    margin-top: -2px;
+    margin-left: 0px;
+  }
+  .pay-container {
+    padding: 2px 16px;
+  }
+  
+  
+  
+  
+  .columnr {
+    float: left;
+    width: 48%;
+    padding: 10px;
+    height: auto;
+  }
+  
+  /* Clear floats after the columns */
+  .rowr:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import CartNew from './CartNew'
-import '../Order/OrderCSS/Or.css'
+import CartItemNew from './CartItemNew'
+import '../Order/Order.css'
 
 
 
@@ -38,7 +38,7 @@ const Cart = ({products, changeQuantity}) => {
                             {
                             products.map(product => {
                                 return (
-                                    <CartNew 
+                                    <CartItemNew 
                                         key={product.id} 
                                         product={product} 
                                         changeQuantity={changeQuantity} 
