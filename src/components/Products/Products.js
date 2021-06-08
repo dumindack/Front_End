@@ -171,30 +171,36 @@ function Products (props) {
        
     return (
         <div>
-            <div className="nav">
+             <div className="nav">
                 <div className="n-container">
-                    <a>
-                        <input type="text" 
-                        placeholder="Search for Cakes.."
-                        onChange={handleChange}
-                        />
-                    </a>
-                    <a></a><a><a></a></a><a></a>
-                    <a>
-                        <h>Choose From</h>       
-                    </a>
-                    <a>
-                        <h className="sort-list"> 
-                            &nbsp; &nbsp;
-                            <select value={value} onChange={handleChange}>
-                                <option value="">All</option>
-                                <option value="birthday">Birthday Cakes</option>
-                                <option value="cup">Cup Cakes</option>
-                                <option value="wedding">Wedding Cakes</option>
-                                <option value="other">Other Cakes</option>
-                            </select>
-                        </h>
-                    </a>
+                    <div class="row01">
+  
+                        <div className="column01">
+                            <a>
+                                <input className="ss" type="text" 
+                                placeholder="Search for Cakes.."
+                                onChange={handleChange}
+                                />
+                            </a>
+                        </div>
+
+                        <div className="column02">
+                            <label>Choose From</label>
+                            <a>
+                                <h className="sort-list"> 
+                                    &nbsp; &nbsp;
+                                    <select value={value} onChange={handleChange}>
+                                        <option value="">All</option>
+                                        <option value="birthday">Birthday Cakes</option>
+                                        <option value="cup">Cup Cakes</option>
+                                        <option value="wedding">Wedding Cakes</option>
+                                        <option value="other">Other Cakes</option>
+                                    </select>
+                                </h>
+                            </a>
+                    
+                        </div>
+                    </div>
                 </div>
             </div>
                     
