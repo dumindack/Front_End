@@ -8,6 +8,7 @@ import { logout } from "../Actions/Auth";
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import React, { Fragment } from "react";
+import{ ProductConsumer} from '../contextAPI';
 
 
 
@@ -27,6 +28,7 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
 
                 
                 <Link to="/DeliveryInfo" class="navbar-brand">Delivery Info</Link>
+                <Link to="/Productlist" class="navbar-brand">Gifts</Link>
        
                   <div className="carticon">
                     

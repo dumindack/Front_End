@@ -32,6 +32,12 @@ import Order from './components/Order/Order';
 import Checkout from './components/Payment/Checkout';
 import Receipt from './components/Receipts/Receipt';
 import CoD from './components/Receipts/CoD';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Product from './components/Product';
+import Productlist from './components/Productlist';
+import Details1 from './components/Details1';
+import GiftCart from './components/GiftCart';
+
 
 
 
@@ -58,9 +64,14 @@ import CoD from './components/Receipts/CoD';
                 <SellerRoute path='/upload_product/ProductList' component={ProductList}/>
                 <Route path='/Register1' component={Register1}/>
                 <Route path='/Selection' component={Selection}/>
+                <Route path='/Details1' component={Details1}/>
                 <BuyerRoute path='/CartProducts' component={CartProducts}/>
                 <AdminRoute path='/AddRegistration' component={AddRegistration}/>
                 <Route path='/Accept/AcceptList' component={AcceptList}/>
+                <Route path='/Product' component={Product}/>
+                <Route path='/Productlist' component={Productlist}/>
+                <Route path='/GiftCart' component={GiftCart}/>
+
                
 
                

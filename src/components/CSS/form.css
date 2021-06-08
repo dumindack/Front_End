@@ -218,9 +218,31 @@ background:rgb(235, 102, 102);
 
 
 .btn-primary{
-  background: #f18375;
+  background: #cfcdc9;
   color: rgb(255, 255, 255);
 
  
+  
+}
+
+/*Product List*/
+
+.plistH{
+  padding-top: 15px;
+  padding-bottom: 8px;
+  background-color: rgb(224, 160, 155);
+  text-align: center;
+}
+
+/* GiftCart*/
+.Gcart{
+  text-align: right;
+  padding-right: 35px;
+  font-weight: 600;
+  color: black;
+  font-size:medium;
+  padding-top: 10px ;
+  padding-bottom: 10px;
+  background-color: #ebf190;
   
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './CSS/form.css';
+import { Link } from "react-router-dom";
 
 
 class Selection extends Component{
@@ -9,7 +10,9 @@ class Selection extends Component{
 
 
             <div class="selection">
-                Are you a Cake Seller or Buyer?
+            <h4><strong>Welcome to the CakeWorld</strong></h4>
+                You can connect with us as Home-made cake seller or as Buyer.
+                <p>Please Register first..</p>
 
             </div>
 
