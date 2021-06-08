@@ -45,11 +45,6 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
                     </li> 
                 </ul>
 
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <Link to="/GiftCart"  class="navbar-brand">Gift Cart</Link>
-                    </li> 
-                </ul>
               </div>
 
 

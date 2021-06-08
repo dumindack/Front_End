@@ -13,7 +13,7 @@ function Details(props){
     useEffect(() => {
         axios
           .get(
-            `https://localhost:44305/api/Product/${productID}`
+            `https://cakeapi.azurewebsites.net/Api/Product/${productID}`
           )
           .then(res => {
             setProducts(res.data);
@@ -28,7 +28,7 @@ function Details(props){
       useEffect(() => {
         axios
           .get(
-            `https://localhost:44305/api/Ratings/product/${productID}`
+            `https://cakeapi.azurewebsites.net/Api/Ratings/product/${productID}`
           )
           .then(res => {
             setRates(res.data);
@@ -56,7 +56,7 @@ function Details(props){
       if (localStorage.token) {
         const user= JSON.parse(atob(localStorage.token.split('.')[1]));
         if (user.role ==="Buyer"){
-          axios.get(`https://localhost:44305/api/Buyers/${user.id}`)
+          axios.get(`https://cakeapi.azurewebsites.net/Api/Buyers/${user.id}`)
             .then(resp => {
             setBuyers(resp.data)
             console.log(resp.data);
@@ -79,7 +79,7 @@ function Details(props){
         refreshRate();
     }, [])
 
-    const ratesAPI = (url = `https://localhost:44305/api/Ratings`) => {
+    const ratesAPI = (url = `https://cakeapi.azurewebsites.net/Api/Ratings`) => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),

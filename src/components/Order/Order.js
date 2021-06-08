@@ -51,7 +51,7 @@ function Order(props) {
       if (localStorage.token) {
         const user= JSON.parse(atob(localStorage.token.split('.')[1]));
         if (user.role ==="Buyer"){
-          axios.get(`https://localhost:44305/api/Buyers/${user.id}`)
+          axios.get(`https://cakeapi.azurewebsites.net/Api/Buyers/${user.id}`)
             .then(resp => {
             setBuyers(resp.data)
             console.log(resp.data);
@@ -80,7 +80,7 @@ function Order(props) {
         refreshOrder();
     }, [])
 
-    const ordersAPI = (url = `https://localhost:44305/api/Ors/`) => {
+    const ordersAPI = (url = `https://cakeapi.azurewebsites.net/Api/OrderDetails/`) => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -238,7 +238,7 @@ useEffect(() => {
   if (localStorage.token) {
     const user= JSON.parse(atob(localStorage.token.split('.')[1]));
     if (user.role ==="Buyer"){
-      axios.get(`https://localhost:44305/api/Buyers/${user.id}`)
+      axios.get(`https://cakeapi.azurewebsites.net/Api/Buyers/${user.id}`)
         .then(resp => {
         setBuyers(resp.data)
         console.log(resp.data);
@@ -264,7 +264,7 @@ useEffect(() => {
     refreshOp();
 }, [])
 
-const opsAPI = (url = `https://localhost:44305/api/OrderproDetails/`) => {
+const opsAPI = (url = `https://cakeapi.azurewebsites.net/Api/OrderProducts/`) => {
     return {
         fetchAll: () => axios.get(url),
         create: newRecord => axios.post(url, newRecord),

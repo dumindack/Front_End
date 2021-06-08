@@ -44,7 +44,7 @@ function CartDetails () {
       if (localStorage.token) {
         const user= JSON.parse(atob(localStorage.token.split('.')[1]));
         if (user.role ==="Buyer"){
-          axios.get(`https://localhost:44305/api/Buyers/${user.id}`)
+          axios.get(`https://cakeapi.azurewebsites.net/Api/Buyers/${user.id}`)
             .then(resp => {
             setBuyers(resp.data)
             console.log(resp.data);
