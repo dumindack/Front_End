@@ -69,7 +69,7 @@ import GiftCart from './components/GiftCart';
                 <AdminRoute path='/AddRegistration' component={AddRegistration}/>
                 <AdminRoute path='/Accept/AcceptList' component={AcceptList}/>
                 <Route path='/Product' component={Product}/>
-                <Route path='/Productlist' component={Productlist}/>
+                <BuyerRoute path='/Productlist' component={Productlist}/>
                 <Route path='/GiftCart' component={GiftCart}/>
 
                
