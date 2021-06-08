@@ -135,9 +135,10 @@
    }
    
    .cart-icon{
-   background-color: rgba(255, 11, 11, 0);
-   position: fixed;
-   right: 5px;
-   top: 10px;
+    background-color: rgb(55, 0, 68);
+    padding: 4px;
+    position: fixed;
+    right: 5px;
+    top: 10px;
    }   
 

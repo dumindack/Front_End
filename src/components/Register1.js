@@ -139,9 +139,9 @@ const Register = () => {
         </div>
       
         
-<div class="row row1">
-        
-        <div class="column column0"> <input type="submit" className="btn btn-primary" value="Register As Buyer" /> </div>
+<div>
+        <br/>
+        <div className="form-group"> <input type="submit" className="btn btn-primary" value="Register As Buyer" /> </div>
         </div>
       </form>
 
