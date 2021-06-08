@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../CSS/form.css';
 
   
-const apiUrl = 'https://localhost:44305/api/Sellers/';  
+const apiUrl = 'https://cakeapi.azurewebsites.net/api/Sellers/';  
   
 class Seller extends React.Component{  
     constructor(props){  
