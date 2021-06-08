@@ -122,7 +122,7 @@ export default function Product(props) {
 
     return (
         <>
-            <div className="container text-center">
+            <div className="lead type pro ">
                 <p className="lead type pro ">Enter Product details</p>
             </div>
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>

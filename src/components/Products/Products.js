@@ -16,7 +16,7 @@ function Products (props) {
     const [cart, setCart] = useState([])
 
     const [currentPage, setcurrentPage] = useState(1);
-    const [itemsPerPage, setitemsPerPage] = useState(8);
+    const [itemsPerPage, setitemsPerPage] = useState(16);
 
     const [pageNumberLimit, setpageNumberLimit] = useState(5);
     const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
