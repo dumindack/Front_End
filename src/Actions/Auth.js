@@ -209,7 +209,7 @@ export const registerAdmin = async (FirstName, LastName, Address, Gender,Email,M
 
 
       try {
-          await axois.post("https://localhost:44305/api/Admins", body, config);
+          await axois.post("https://cakeapi.azurewebsites.net/api/Admins", body, config);
           alert("Your are registerd ");
   
       } catch (error) {
