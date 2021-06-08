@@ -12,6 +12,7 @@ const initialFieldValues = {
     imageName: '',
     category:'',
     description:'',
+    conformation : 'No',
     imageSrc: defaultImageSrc,
     imageFile: null
 }
@@ -107,6 +108,7 @@ export default function Product(props) {
             formData.append('description', values.description)
             formData.append('imageFile', values.imageFile)
             formData.append('sellerID', sellers.id)
+            formData.append('conformation', values.conformation)
             addOrEdit(formData, resetForm)
         }
     }
