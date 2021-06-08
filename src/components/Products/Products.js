@@ -26,7 +26,7 @@ function Products (props) {
     useEffect(() => {
         axios
           .get(
-            'https://localhost:44305/api/Product'
+            'https://cakeapi.azurewebsites.net/api/Product'
           )
           .then(res => {
             setProducts(res.data);

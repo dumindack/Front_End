@@ -11,9 +11,9 @@ export default function ProductList() {
         refreshProductList();
     }, [])
 
-    const productAPI = (url = 'https://localhost:44305/api/Product/') => {
+    const productAPI = (url = 'https://cakeapi.azurewebsites.net/api/Product/') => {
         return {
-            fetchAll: () => axios.get('https://localhost:44305/api/Product/Accept/'),
+            fetchAll: () => axios.get('https://cakeapi.azurewebsites.net/api/Product/Accept/'),
             create: newRecord => axios.post(url, newRecord),
             update: (id, updatedRecord) => axios.put(url + id, updatedRecord),
             delete: id => axios.delete(url + id)
