@@ -45,6 +45,9 @@ export default function(state = initialState, action) {
             localStorage.removeItem('cart');
             localStorage.removeItem('total');
             localStorage.removeItem('BUYER_EMAIL');
+            localStorage.removeItem('Role');
+            localStorage.removeItem('CartQuantity');
+            localStorage.removeItem('orderNo');
             return {
                 ...state,
                 token: null,

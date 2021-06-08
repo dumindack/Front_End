@@ -24,7 +24,7 @@ import { setAlert } from "./alert";
 export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {
     const user= JSON.parse(atob(localStorage.token.split('.')[1]));
-
+    localStorage.setItem("Role",user.role)
     if (user.role ==="Seller") {
       try {
         const res = await axois.get (
