@@ -154,7 +154,7 @@ class Receipt extends React.Component{
                             </div>
                         </div>
                         </div>
-                        <button onClick={this.generatePDF} >Download PDF</button>
+                        <button onClick={this.generatePDF} className="hm1-btn" >Download PDF</button>
                         <br/><br/>
                             <Link to="/">
                                 <button  className="hm-btn">back to home</button>
