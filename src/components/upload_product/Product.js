@@ -81,7 +81,7 @@ export default function Product(props) {
       if (localStorage.token) {
         const user= JSON.parse(atob(localStorage.token.split('.')[1]));
         if (user.role ==="Seller"){
-          axios.get(`https://cakeworldapi.azurewebsites.net/api/Sellers/${user.id}`)
+          axios.get(`https://cakeapi.azurewebsites.net/api/Sellers/${user.id}`)
             .then(resp => {
             setSellers(resp.data)
             console.log(resp.data);

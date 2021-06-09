@@ -66,7 +66,7 @@ function Products (props) {
                         ? 
                         <div>
                             <div>
-                                <p>There are no cake products as {search} </p>
+                                <p>sorry! product list empty </p>
                             </div> 
                         </div>
                         :

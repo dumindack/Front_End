@@ -214,7 +214,7 @@ function Details(props){
                     <div className="img-container" onMouseMove={handleMouseMove}
                         style={{backgroundImage: `url(${products.imageSrc})`}} ref={imgDiv} 
                         onMouseLeave={() => imgDiv.current.style.backgroundPosition = `center`} />
-                    <div className="box-details">
+                    <div className="box-details1">
                         <h2>{products.productName}</h2>
                         <div>
                             <span>
@@ -235,7 +235,8 @@ function Details(props){
                             <span>({average}/5.0)</span>
                         </div>
                         <h3>Rs:{products.price}.00</h3>
-                        <h>category | {products.category} cakes</h>
+                        <br/><br/>
+                        <p>category | {products.category} cakes</p>
                         <hr/>
                         <p>{products.description}</p>
                         <hr/>

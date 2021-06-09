@@ -37,27 +37,27 @@
     cursor: zoom-in;
   }
 
-  .box-details{
+  .box-details1{
     max-width: 500px;
     width: 100%;
     margin: 20px;
   }
-  .box-details h{
+  .box-details1 h{
     color: rgb(131, 131, 131);
     font-size: 0.9rem;
   }
-  .box-details h2{
+  .box-details1 h2{
     text-transform: uppercase;
     color: rgb(50, 1, 65);
     letter-spacing: 1px;
     font-size: 2rem;
   }
-  .box-details p{
+  .box-details1 p{
     line-height: 1.5;
     margin: 10px 0;
     color: #353435;
   }
-  .box-details h3{
+  .box-details1 h3{
     color: rgb(194, 7, 44);
   }
 

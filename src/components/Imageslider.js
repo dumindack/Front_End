@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Carousel } from 'react-bootstrap';
-import icon from '../Media/img/cake01.jpg';
-import icon1 from '../Media/img/cake02.jpg';
+import icon from '../Media/img/cakenew01.jpg';
+import icon1 from '../Media/img/cakenew02.jpg';
 import icon2 from '../Media/img/cake03.jpg';
 import icon3 from '../Media/gif/giphy.gif';
 import './CSS/Imageslider.css'
