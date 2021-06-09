@@ -28,7 +28,7 @@ export const loadUser = () => async (dispatch) => {
     if (user.role ==="Seller") {
       try {
         const res = await axois.get (
-          `https://cakeapi.azurewebsites.net/api/Sellers/${user.id}`
+          `https://cakeworldapi.azurewebsites.net/api/Sellers/${user.id}`
        
         );
         dispatch({
@@ -45,7 +45,7 @@ export const loadUser = () => async (dispatch) => {
     else if (user.role ==="Admin") {
       try {
         const res = await axois.get (
-          `https://cakeapi.azurewebsites.net/api/Admins/${user.id}`
+          `https://cakeworldapi.azurewebsites.net/api/Admins/${user.id}`
         
         );
         dispatch({
@@ -61,7 +61,7 @@ export const loadUser = () => async (dispatch) => {
        else if (user.role ==="Buyer") {
         try {
           const res = await axois.get (
-            `https://cakeapi.azurewebsites.net/api/Buyers/${user.id}`
+            `https://cakeworldapi.azurewebsites.net/api/Buyers/${user.id}`
          
           );
           dispatch({
@@ -90,7 +90,7 @@ export const login = (email, password) => async (dispatch) => {
 
   try {
     const res = await axois.post(
-        "https://cakeapi.azurewebsites.net/api/Logins",
+        "https://cakeworldapi.azurewebsites.net/api/Logins",
       body,
       config
     );
@@ -137,7 +137,7 @@ export const registerSeller = async (FirstName, LastName, Address, Gender,Email,
 
 
         try {
-            await axois.post("https://cakeapi.azurewebsites.net/api/Sellers", body, config);
+            await axois.post("https://cakeworldapi.azurewebsites.net/api/Sellers", body, config);
             alert("Your are registerd ");
     
         } catch (error) {
@@ -172,7 +172,7 @@ export const registerBuyer = async (FirstName, LastName, Address, Gender,Email,M
 
 
       try {
-          await axois.post("https://cakeapi.azurewebsites.net/api/Buyers", body, config);
+          await axois.post("https://cakeworldapi.azurewebsites.net/api/Buyers", body, config);
           alert("Your are registerd ");
   
       } catch (error) {
@@ -209,7 +209,7 @@ export const registerAdmin = async (FirstName, LastName, Address, Gender,Email,M
 
 
       try {
-          await axois.post("https://cakeapi.azurewebsites.net/api/Admins", body, config);
+          await axois.post("https://cakeworldapi.azurewebsites.net/api/Admins", body, config);
           alert("Your are registerd ");
   
       } catch (error) {

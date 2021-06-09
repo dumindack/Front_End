@@ -17,7 +17,7 @@ export default function ProductList() {
       if (localStorage.token) {
         const user= JSON.parse(atob(localStorage.token.split('.')[1]));
         if (user.role ==="Seller"){
-          axios.get(`https://cakeapi.azurewebsites.net/api/Sellers/${user.id}`)
+          axios.get(`https://cakeworldapi.azurewebsites.net/api/Sellers/${user.id}`)
             .then(resp => {
             setSellers(resp.data)
             console.log(resp.data);
@@ -32,9 +32,9 @@ export default function ProductList() {
     }, []);
 
 
-    const productAPI = (url = 'https://cakeapi.azurewebsites.net/api/Product/') => {
+    const productAPI = (url = 'https://cakeworldapi.azurewebsites.net/api/Product/') => {
         return {
-            fetchAll: () => axios.get(`https://cakeapi.azurewebsites.net/api/Product/Sellers/${sellers.id}`),
+            fetchAll: () => axios.get(`https://cakeworldapi.azurewebsites.net/api/Product/Sellers/${sellers.id}`),
             create: newRecord => axios.post(url, newRecord),
             update: (id, updatedRecord) => axios.put(url + id, updatedRecord),
             delete: id => axios.delete(url + id)

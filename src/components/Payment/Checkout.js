@@ -73,7 +73,7 @@ class Checkout extends Component  {
   
   if (Object.keys(errors).length === 0) {
   console.log(data);
-  axios.post('https://cakeapi.azurewebsites.net/Api/Payments',
+  axios.post('https://cakeworldapi.azurewebsites.net/Api/Payments',
   {
     email:this.state.data.email,
     cardName:this.state.data.cardName,
