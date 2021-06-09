@@ -104,7 +104,7 @@ export default function Product(props) {
             formData.append('productName', values.productName)
             formData.append('price', values.price)
             formData.append('imageName', values.imageName)
-            formData.append('category', values.category)
+            formData.append('category', category)
             formData.append('description', values.description)
             formData.append('imageFile', values.imageFile)
             formData.append('sellerID', sellers.id)
