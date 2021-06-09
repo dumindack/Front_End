@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../CSS/form.css';
 import axios from 'axios'
-
+import './Radio1.css'
 
 const defaultImageSrc = '/img/image_placeholder.png'
 
@@ -116,7 +116,9 @@ export default function Product(props) {
     const applyErrorClass = field => ((field in errors && errors[field] === false) ? ' invalid-field' : '')
 
   
-    
+    let categoryState = [ "other","birthday", "cup", "wedding"];
+    const [category, setCategory] = useState("Other");
+
 
 
 
@@ -144,12 +146,28 @@ export default function Product(props) {
                                 onChange={handleInputChange} />
                             
                         </div>
-                        <div className="form-group">
-                            <input className="form-control" placeholder="Category" name="category"
-                                value={values.category}
-                                onChange={handleInputChange} />
-                            
+                        
+                        <div >
+                            <label>Select a Category</label>
+                            <div className="custom-control custom-radio">
+                                {categoryState.map(result => (
+                                    <div>
+                                    <label className="containerr1">
+                                        {result}
+
+                                        <input type="radio" name="radio"
+                                        value={result}
+                                        checked={category === result}
+                                        onChange={(e) => setCategory(e.target.value)}
+                                        />
+
+                                        <span className="checkmark1"></span>
+                                       </label>
+                                    </div> 
+                                ))};
+                            </div>
                         </div>
+
                         <div className="form-group">
                             <input className="form-control" placeholder="Description" name="description"
                                 value={values.description}
