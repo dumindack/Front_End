@@ -35,7 +35,7 @@ const Navigationbar = ({ auth: { isAuthenticated ,loading, user }, logout }) =>{
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                      <Link to="/upload_product/ProductList"  class="navbar-brand">My Profile</Link>
+                      <Link to="/upload_product/ProductList"  class="navbar-brand">My Products</Link>
                     </li> 
                 </ul>
 

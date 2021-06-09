@@ -115,12 +115,13 @@ font-size:x-large;
 /*iMAGE CARD*/
 
 .card{
- height: 400px;
+ height: 430px;
  width: 300px;
  border-style: solid;
  border-color: rgb(163, 16, 16);
  border-radius: 10px;
 }
+
 
 .card-img-top {
 height: 200px;
@@ -139,10 +140,20 @@ border-color: #f10d20;
 margin-bottom: 20px;
 border-radius: 10px;
 }
+.btnls{
+  margin-bottom: 0px;
+}
 
 .pro{
  font-style: initial;
  font-weight: bold;
+ color :rgb(12, 0, 0);
+ margin-left: 10%;
+ margin-bottom: 0%;
+}
+.myc{
+  color: #86060e;
+  margin-left: 25%;
 }
 
 
@@ -164,6 +175,7 @@ outline: none;
 
 padding: 3px 20px;
 background:rgb(235, 102, 102);
+margin-bottom: 0%;
 
 }
 
@@ -233,6 +245,11 @@ background:rgb(235, 102, 102);
   background-color: rgb(224, 160, 155);
   text-align: center;
 }
+.sss{
+  font-size: medium;
+  color: #000000;
+}
+
 
 /* GiftCart*/
 .Gcart{

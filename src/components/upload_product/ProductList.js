@@ -9,7 +9,7 @@ export default function ProductList() {
 
     useEffect(() => {
         refreshProductList();
-    }, [])
+    }, [refreshProductList])
 
 
     const [sellers, setSellers] = useState([]);
@@ -84,10 +84,10 @@ export default function ProductList() {
             <img src={data.imageSrc} className="card-img-top" />
             <div className="card-body">
                 <h4>{data.productName}</h4>
-                <h6>Rs {data.price}</h6>
-                <h6>Category - {data.category}</h6>
-                <span>{data.description}</span> <br />
-                <button className="delete-button btn-light" Delete onClick={e => onDelete(e, parseInt(data.productID))}>
+                <h6 className="sss">Rs {data.price}</h6>
+                <h6 className="sss">Category - {data.category}</h6>
+                <span >{data.description}</span> <br />
+                <button className="delete-button btn-light btnls" Delete onClick={e => onDelete(e, parseInt(data.productID))}>
                     Delete<i className="far fa-trash-alt"></i>
                 </button>
             </div>
@@ -100,9 +100,9 @@ export default function ProductList() {
     return (
         <div className="row">
             <div className="col-md-12">
-                <div className="jumbotron jumbotron-fluid py-4">
-                    <div className="container text-center">
-                        <h1 className="typeList">My Products</h1>
+                <div >
+                    <div className="text-center">
+                        <h1 className="typeList myc">My Products</h1>
                     </div>
                 </div>
             </div>
